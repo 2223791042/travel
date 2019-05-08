@@ -1,0 +1,1171 @@
+@media screen and (min-width: 994px) and (max-width: 1601px){
+	.wrap{width:1000px;}
+	.live-area .live-list ul li{width:200px;margin-right:45px;}
+	.live-area .live-list ul li > p{height: 176px;overflow: hidden;}
+	.live-area .more{margin-right:135px;}
+	.tl li.tlc{margin-left:30px;margin-right:30px;}
+	.footer .foot-nav > ul > li{margin-right: 35px;width: 90px;}
+	.footer .foot-nav > ul > li > ul > li > a{padding-top:3px;padding-bottom:3px;}
+	nav > ul > li > a{font-size:18px;margin-right:60px;}
+	.header-info{margin-right:60px;}
+	.bannerFade .tab-btn{bottom:150px;}
+	#video{width: 915px;height: 515px;margin-left: -457.5px;margin-top: -257.5px;}
+	.list .listb > li{width:487.5px;}
+	.list .listb > li:first-child{margin-right:25px;}
+	.list .listb > li > a > .left-info h4{font-size:18px;line-height:58px;}
+	.list .listb > li > a > .left-info p{font-size:12px;line-height:26px;height:52px;}
+	.list .listb > li > .listc > li,.list .addList > li{width:231px;margin-bottom:25px;}
+	.list .addList > li{margin-right:25px;}
+	.list .listb > li > .listc > li{margin-right:25px;}
+	.list .listb > li > .listc > li:last-child{margin-right:0}
+	.list .listb > li > .listc > li > a > h4,.list .addList > li > a > h4{font-size:18px;line-height:24px;padding-top:16px;padding-bottom:12px;}
+	.list .listb > li > .listc > .viewMore > a > h4,.cultural2 .list-activity > .viewMore > a > h4{font-size:18px;}
+	.list .listb > li > a > .left-info span{font-size:12px;}
+	.list .listb > li > .listc > .views > span{font-size:12px;}
+	.list .listb > li > .listc > .viewMore > a > i{font-size:12px;}
+	.list .listb > li > .listc > .viewMore > a > .zhankai,.cultural2 .list-activity > .viewMore > a > .zhankai{padding-top:10px;padding-bottom:0;width:62px;}
+	.list .listb > li > .listc > li > a h4 > b,.list .addList > li > a h4 > b{width:35px;height:24px;line-height:24px;font-size:12px;border:1px solid #272831;}
+	.list .listb > li > a h4 > b{width:35px;height:24px;font-size: 12px;border:1px solid #272831;line-height:24px;}
+	.title-block{width:250px;margin-top: -70px;}
+	.title-block > div{line-height:69px;font-size:30px;}
+	.views > span{font-size:12px;}
+	.lrslist li{width:285px;margin-right:70px;}
+	.detail-list .rList > ul > li .celebrity-img-box{width:90px;height:90px;line-height:90px;}
+	.detail-list .rList > ul > li img{}
+	.detail-list .rList > ul > li h5{margin-left:16px;font-size:14px;margin-top:12px;width:50%;}
+	.detail-list .rList > ul > li{margin-bottom:22px;}
+	.page-detail-title{font-size:21px;line-height:32px;}
+	.detail-list .rList h4{font-size:18px;}
+	.detail-list .lDetail > p{margin-bottom:28px;}
+	.detail-list .lDetail > .about > li > a > img{width:70px;padding: 10px 2px 10px 10px;height:70px;}
+	.detail-list .lDetail > .about > li > a > h5{font-size:14px;margin-top:20px;width:52%;}
+	.inn > .inn-content .inn-info h2{font-size:26px;}
+	.inn > .inn-content .inn-info span{margin-top:14px;margin-bottom:26px;}
+	.inn > .inn-content .inn-logo{margin-right:28px;}
+	.inn > .inn-content .inn-info{margin-right:70px;}
+	.inn{padding-top:60px;}
+	.innBanner,.innBanner2{margin-top:60px;}
+	.inn > p{margin-top:40px;}
+	.inn > .inn-food > li > a > img{width:70px;padding: 10px 2px 10px 10px;}
+	.inn > .inn-food > li > a > h5{font-size:14px;margin-top:20px;width:52%;}
+	.lrslist li h4{font-size:18px;line-height:55px;}
+	.detail-info{margin-bottom:40px;}
+	.detail-info > p > a > img{width:19px;margin-left:10px;}
+	.detail-list .lDetail > h2{font-size:18px;line-height:28px;}
+
+	.introduction h2{margin-top:40px;}
+	.geography .pc1000-g{display:block;}
+	.geography > div{float:none;}
+	.geography .g2{display:none;}
+	.geography .g1{width:100%;margin-right:0;}
+	.geography .h42{margin-top:32px;}
+	.glist > ul > li > .gl1 > .pcn{display:none;}
+	.glist > ul > li > .gl1 > .pc1000{display:block;}
+	.glist > ul > li > div{float:none;}
+	.glist > ul > li > .gl1{width:100%;margin-right:0;}
+	.glist > ul > li > .gl2{width:100%;}
+	.glist > ul > li{margin-top:32px;}
+	.glist > ul > li > .gl2{margin-top:32px;}
+	.geography2{padding-top:16px;padding-bottom:64px;}
+	.geography2 > h2{margin-top:48px;}
+	.historyBanner > div > h2{font-size:36px;height:150px;line-height:50px;left:146px;top:58px;}
+	.historyBanner > div > div{width:500px;}
+	.historyBanner > div > p{width:383px;right:77px;top:70px;}
+	.historyBanner .arrow-left{left:32px;}
+	.historyBanner .arrow-right{right:32px;}
+	.history .h-pc1000{display:block;}
+	.history .h1 p{margin-top:32px;}
+	.history > div{float:none;}
+	.history .h1{width:100%;margin-right:0;}
+	.history2 .hi2{width:100%;}
+	.history .h2{display:none;}
+	.history2 .h2pc1000{display:block;}
+	.history2 > p{margin-top:32px;}
+	.history2 > div{float:none;margin-top:0;}
+	.history2 .hi1{display:none;}
+	.history2 .hi2 h4:first-child{margin-top:32px;}
+
+	.field h3{font-size:25px;}
+	.field h4{font-size:20px;}
+	.field > span{width:26px;}
+
+	.service > h3{font-size:25px;}
+	.service > ul > li{width:257px;margin-right:100px;}
+	.service .views > span > a{font-size:18px;}
+
+	.internet > ul > li{width:285px;margin-right:71px;}
+	.internet > ul > li > h3{font-size:18px;}
+
+	.ph1{font-size:25px;}
+	.cultural > ul > li img{width:285px;margin-right:28px;height:178px;}
+	.cultural > ul > li > a > div{width:685px;}
+	.cultural > ul > li > a h2{font-size:18px;line-height:36px;}
+	.cultural > ul > li > a > div > span{font-size:12px;margin-top:5px;padding:2px 8px;}
+	.cultural > ul > li > a h4{font-size:12px;margin-top:8px;}
+	.cultural > ul > li > a p{font-size:12px;margin-top:7px;line-height:20px;}
+	.cultural > ul > li > a .views{margin-top:9px;}
+	.cultural > ul > li > a .views > span{padding-bottom:6px;font-size:14px;}
+	.list-activity > li{width:285px;margin-right:71px;}
+	.cultural2 .list-activity > li{margin-bottom:40px;height:282px;}
+	.list-activity > li h4{font-size:18px;line-height:28px;margin-top:10px;}
+	.cultural2 .list-activity > li .views{margin-top:10px}
+
+	.ralBox .lb{width:410px;margin-right:75px;}
+	.ralBox .rb{width:514px;}
+	.festival .ralBox .rb p{font-size:12px;line-height:20px;margin-right:15px;}
+	.festival2 .lb h4{font-size:14px;line-height:20px;margin-top:34px;}
+	.festival2 .lb p{font-size:12px;line-height:20px;}
+	.festival2 .ralBox .lb h3{font-size:20px;}
+	.festival2 .ralBox .lb button, .muxin2 .ralBox .lb button{font-size:18px;padding-left:37px;padding-right:37px;}
+	.festival2 .ralBox .rb h5{font-size:16px;}
+	.festival2 .ralBox .lb button, .muxin2 .ralBox .lb button{margin-top:17px;}
+
+	.muxin3 > ul > li h4{font-size:18px;}
+	.muxin3 > ul > li button{font-size:18px;}
+	.muxin3 > ul > .li1{padding-right:95px;}
+	.muxin3 > ul > .li3{padding-left:85px;}
+	.muxin2 .ralBox .lb button{margin-top:33px;}
+	.muxin3 > ul > li button{margin-top:16px;}
+	.muxin3 > ul > li > img{width:85px;}
+	.muxin3 > ul > li h5{font-size:14px;}
+
+	.photo-album .photo-album-play{width:60px;margin-top:-30px;margin-left:-30px;}
+	.notice .notice-list{width:642px;margin-right:71px;}
+	.notice .time-select-list{width:278px;}
+	.notice .notice-list > ul > li h2{font-size:18px;}
+	.notice .notice-list > ul > li .active .notice-date-top{font-size:12px;padding:2px 8px;}
+	.notice .notice-list > ul > li .notice-date{margin-right:15px;}
+	.notice .notice-list > ul > li h2 span{margin-top:23px;}
+
+
+	.notice .time-select-list h3{font-size:18px;}
+	.notice .time-select-list > ul{margin-top: 22px;}
+	.notice .time-select-list > ul > li{font-size:12px;line-height:18px;margin-bottom:8px;}
+	.notice .notice-list > ul > li .notice-date .notice-date-month{font-size:18px;margin-bottom:4px;}
+	.notice .notice-list > ul > li .notice-date .notice-date-year{font-size:12px;padding:0px 6px;margin-left:5px;}
+
+	.news .news-list{width:642px;margin-right:71px;}
+	.news .news-list > ul > li > a > div{width:185px;}
+	.news .news-list > ul > li > a > div > img{width:185px;height:116px;}
+	.news .news-list > ul > li > a > .news-info{width:437px;margin-left:20px;}
+	.news .news-list > ul > li > a > .news-info h2{font-size:18px;}
+	.news .news-list > ul > li > a > .news-info span{font-size:12px;margin-top:12px;padding:2px 8px;}
+	.news .news-list > ul > li > a > .news-info p{font-size:12px;line-height:20px;margin-top:20px;}
+	.news .news-list > ul > li > div{font-size:12px;line-height:34px;}
+
+	.list-activity > .viewMore > a > .zhankai{padding-top:10px;width:62px;padding-bottom:0;}
+	.list-activity > .viewMore > a > h4{font-size:18px;}
+
+	.travel-tips-box{padding:57px 25px 11px 25px;}
+	.travel-tips-box > li{width:178px;margin-right:75px;padding-top:15px;padding-bottom:20px;margin-bottom:45px;}
+	.travel-tips-box > li > p{font-family: Microsoft YaHei;font-size: 20px;color: #272831;letter-spacing: 1.07px;margin-top:0px;}
+	.travel-tips-box > li > .travel-tips-box-views{margin-top:5px;}
+	.travel-tips-box-views > span{font-size:12px;}
+
+	.travel-tips-dongzha{padding-bottom:51px;}
+	.travel-tips-dongzha .map-img{padding:47px 0px 0 0px;position:relative;}
+	.travel-tips-dongzha > h1{padding-top:22px;}
+	.travel-tips-dongzha .map-img > span{position:absolute;top:596px;right:0px;line-height:40px;font-family: Microsoft YaHei;font-size: 14px;color: #FFFFFF;letter-spacing: 0.8px;z-index:100;padding-right:8px;cursor:pointer;}
+	.travel-tips-dongzha .map-img > div{opacity: 0.5;background: #272831;width:137px;height:40px;position:absolute;top:596px;right:0px;}
+	.travel-tips-xizha .map-img > span{top:505px;}
+	.travel-tips-xizha .map-img > div{top:505px;}
+
+	.travel-tips-CCO > .COO-info .COO-info-text{width:910px;}
+	.travel-tips-CCO > h1,.travel-tips-service-point > h1,.travel-tips-phone > h1{margin-top:23px;}
+	.travel-tips-CCO > .innBanner,.travel-tips-service-point > img,.travel-tips-phone > ul{margin-top:34px;}
+	.travel-tips-service-point > b{margin-top:34px;}
+	.travel-tips-service-point > p{margin-top:11px;}
+	.travel-tips-service-point{padding-bottom:45px;}
+
+	.travel-tips-phone > ul > li{width:284px;margin-right:71px;padding-top:16px;padding-bottom:24px;margin-bottom:34px;}
+	.travel-tips-phone > ul > li h5{font-size: 18px;line-height: 32px;}
+	.travel-tips-phone > ul > li p{font-size: 24px;line-height: 30px;margin-top:8px;}
+
+	.travel-tips-surrounding-traffic .route > li > div > p{padding-right:20px;padding-left:20px;}
+	.travel-tips-surrounding-traffic .route > li > span{width:136px;}
+	.travel-tips-surrounding-traffic{padding-bottom:17px;padding-top:34px;}
+	.travel-tips-surrounding-traffic > h4{margin-top:34px;}
+	.travel-tips-surrounding-traffic > h5{margin-top:34px;}
+	.travel-tips-surrounding-traffic > hr{margin-top:34px;}
+	.travel-tips-surrounding-traffic .route{margin-top:17px;}
+	.travel-tips-surrounding-traffic > .small-mt{margin-top:11px;}
+	.travel-tips-surrounding-traffic > .small-mt2{margin-top:17px;}
+	.travel-tips-surrounding-traffic > .small-mt-p{margin-top:8px;}
+	
+	.travel-tips-CCO > .COO-info1{margin-top:51px;padding-bottom:28px;}
+	.travel-tips-CCO > .COO-info .COO-info-text ul li:first-child{margin-bottom:17px;}
+
+	.travel-tips-scenic-spot-traffic,.travel-tips-scenic-spot-traffic > .p-tip{padding-top:34px;padding-bottom:34px;}
+	.travel-tips-scenic-spot-traffic > hr{margin-top:34px;margin-bottom:34px;}
+	.self-drive{padding-top:34px;padding-bottom:45px;}
+	.self-drive > h4{padding-top:34px;padding-bottom:11px;}
+	.self-drive > h5{margin-top:11px;}
+	.self-drive > hr{margin-top:34px;}
+	.self-drive > .hr-36{margin-top:25px;}
+	.self-drive > img{margin-top:11px;}
+
+	#video-window .video-content{width:915px;height:515px;margin-left:-457.5px;margin-top:-257.5px;}
+	#video-window .video-content > p{width:915px;margin-left:-457.5px;}
+
+	.travel_tips_strategy .strategy-list li a .left-img{width:228px;margin-right:28px;}
+	.travel_tips_strategy .strategy-list li a .right-content{width:742px;}
+	.travel_tips_strategy .strategy-list li a .right-content h2{font-size:20px;line-height:26px;}
+	.travel_tips_strategy .strategy-list li a .right-content p{font-size:14px;line-height:20px;margin-top:5px;}
+	.travel_tips_strategy .strategy-list li a .right-content .views{margin-top:12px;}
+
+	.travel_tips_ticket .tiket-info > div:first-child{margin-right:28.5px;}
+	.travel_tips_ticket .tiket-info > div{width:483px;}
+	.travel_tips_ticket .lrslist li > a > div span{font-size:14px;}
+	.travel_tips_ticket .tiket-info2 h4 .info{font-size:14px;}
+
+	.historyBanner > div > p{font-size:14px;line-height:28px;letter-spacing:0.5px;}
+
+	.friendlink-list > ul > li{width:135.5px;margin-right:57px;height:180px;}
+	.friendlink-list > ul > li p, .friendlink-list > ul > li .views > span{font-size:16px;}
+	.friendlink .friendlink-list-2 > ul > li{width:214px;margin-right:28.5px;}
+	.friendlink .friendlink-list-2 > ul > li h3{font-size:14px;}
+	.friendlink .friendlink-list-2 > ul > li img{padding:10px;}
+
+	.suggestions form > div input[type="text"]{margin-right: 25px;width: 194px;}
+	.suggestions form > div input{padding:14px 17px;width: 204px;}
+	.suggestions form > div input[type="submit"]{padding:11.5px 37px;}
+
+	.qiaoye .img-box1{margin-right:2%;}
+
+	.bookarea .book-info h2{padding-top:10px;font-size:24px;line-height:40px}
+	.bookarea .book-info > p{margin-top:0;}
+	.bookarea .book-info > span{margin-top:5px;}
+	.bookarea .book-info h4{margin-top:10px;font-size:20px;}
+	.bookarea .book-info h4 .views{margin-bottom:-10px;}
+	.bookarea .book-info .content{margin-top:10px;}
+	.travel-tips-surrounding-traffic .company-list > li{margin-right:28.5px;}
+	.travel-tips-surrounding-traffic .company-list > li > div{width:214px;line-height:60px;height:60px;}
+	.travel-tips-surrounding-traffic .company-list > li > div > h5{font-size:12px;}
+	.travel-tips-surrounding-traffic .company-list > li > div > img{padding:10px;}
+
+	.media-login .login-area .login input[type="text"]{box-sizing:border-box;width:100%;height:54px;}
+	.media-login .login-area .login form > span{width:33%;}
+	.media-login .login-area .login input[type="text"].code{width:60%;}
+
+	.small-img-area ul li{width:126px;margin-right:8px;margin-left:8px;height:71px;}
+	.small-img-area ul{}
+	.small-img-area .content-list .img-info{margin-top:15px;line-height:24px;font-size:14px;}
+
+	.photos-area .small-img-area-bg{height:216px;}
+	.photos-area .small-img-area{padding-bottom:0;padding-top:20px;}
+	.small-img-area p{margin-top:16px;font-size:16px;letter-spacing:0.4px;line-height:28px;}
+
+	.travel_tips_ticket .tiket-info2 > div > div > span.info{font-size:14px;}
+	.media-login .login-area .login form > span  > img{height:54px;}
+
+	.zhaoshang .bannerpc .tab-btn{bottom:32px;}
+	.videos-list > li .play-btn{width:100%;height:178px;}
+	.videos-list > li .play-btn .s-banner{height:178px;width: 285px;}
+
+
+
+	/*新加CSS*/
+	.list .listb > li > .listc > li > a > img{width:231px;height:144px;}
+	.cultural2 .list-activity > li > a > img{width:285px;height:178px;}
+	.list-activity > li.viewMore > a > img{width:auto;height:auto;}
+
+	.tourist-industry3 .book .info h4{font-size:20px;line-height:34px;}
+	.tourist-industry3 .book .info span{font-size:12px;margin-top:10px;}
+
+	.list .listb > li:first-child > a > img{width:488px;height:305px;}
+
+	.media-login .login-area .login form > span #mycode{height:54px;}
+	.Honors .four-list li img{width:228;height:143px;}
+}
+
+
+
+@media (min-width: 1601px){
+	.wrap{width:1400px;}
+}
+
+@media only screen and (min-width: 1000px){
+
+}
+@media only screen and (min-width: 481px){
+
+}
+@media only screen and (min-width: 561px){
+
+}
+@media only screen and (min-width: 700px){
+
+}
+@media only screen and (max-width:500px){
+
+}
+@media only screen and (max-width:768px){
+
+}
+@media only screen and (min-width:768px){
+
+}
+
+@media screen and (min-width: 994px) and (max-width: 1025px){
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 1025px){
+
+}
+
+@media screen and (min-width: 767px) and (max-width: 800px){
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px){
+	.page-top-img .show1440{display:block;}
+	.page-top-img .show-other{display:none;}
+}
+
+
+@media only screen and (max-width:1025px){
+	nav > ul > li > a{margin-right:35px;}
+	.header-info{margin-right:35px;}
+	.bannerFade .tab-btn{bottom: 90px;}
+	.title-block{margin-top:-40px;}
+	.title-block > div{line-height:60px;}
+
+}
+
+@media only screen and (max-width:768px){
+	.live-area{display:none;}
+	.wap-scroll-news{display:block!important;}
+	#page1{padding-top:28px;display:none;}
+	#page2 .title{display:none;}
+	#page3{padding-top:28px;}
+	.wrap{width:auto;margin-left:15px;margin-right:15px;}
+	body{position:relative;padding-top:50px;}
+	.header-bg{display:none;}
+	header{top:0;min-height:50px;height:50px;width:100%;z-index:9999;background:#272831}
+	header .logo{width:20px;float:left;margin-top:8px;margin-left:15px;}
+	header .logo .pc-logo{display:none;}
+	header .logo .phone-logo{display:block;}
+	.header-info{margin-top:0;margin-right:5px;}
+	.header-info ul li{display:none;height:50px;line-height:50px;padding:0px 10px;}
+	.header-info ul li.yuding{display:block;background:none;}
+	.header-info ul li.yuding > a{background:#db1900;padding:5px 10px;font-size:12px;}
+	.header-info ul li.dianhua{display:block;}
+	.header-info ul li.dianhua img{width:18px;}
+	.header-info ul li.sousuo{display:block;}
+	/*.header-info ul li.dianhua img{width:18px;}*/
+	nav{left:50px;width:100%;bottom:auto;top:0px;background:#fff;z-index:9999;}
+	nav > ul > li{float:none;position:relative;}
+	nav ul .active > a{border-bottom:1px solid #D5DAE1;}
+	nav > ul > li > a{color:#272831;margin-right:auto;border-bottom:1px solid #D5DAE1;padding:15px 0px 15px 24px;letter-spacing: 0.8px;font-family:PingFangSC-Regular;font-size:14px;}
+	.phone-btn{display:block;}
+	.hg-pc-btn{display:none;}
+	nav .phone-menu{display:block;}
+	nav > ul > li > img{display:block;}
+	.views > span{font-size:12px;padding-bottom:4px;}
+	.live-area .more > .views > span{font-size:12px;padding-bottom:4px;}
+	.pagination{bottom:16px;width: 100%;left:auto;}
+	.live-area .more{margin-right:auto;position:relative;width:100%;}
+	.live-area{margin-top:16px;}
+	.live-area .more > p{display:inline-block;}
+	.live-area .more > .views{position:absolute;right:0;bottom:0;}
+	.live-area .gam-list{margin-top:8px;}
+	.live-list{margin-top:15px;}
+	.live-area .live-list ul li{padding-top:15px;padding-bottom:15px;width:100%;margin-right:0;}
+	.live-area .live-list ul li:not(:last-child){border-bottom:solid 1px #D5DAE1;}
+	.live-area .live-list ul li > p{font-family: PingFangSC-Regular;font-size: 14px;color: #272831;letter-spacing: 0.8px;line-height: 24px;}
+	.live-area .live-list ul li > .views{display:none;}
+	.line{display:none;}
+	.title > span{font-family: 'SourceHanS-S_Be206bf1321a330';font-size:18px;color: #272831;letter-spacing: 0.8px;}
+	.title > span >span{right:-25px;bottom:0;}
+	.title > div{padding-right:0;font-family: 'SourceHanS-S_Be206bf1321a330';font-size:9px;color: #7E808A;letter-spacing: 0.6px;}
+	.slidebanner{margin-top:25px;width:100%;margin-left:0;margin-right:0;}
+	.content-text{padding:40px 0 0 0;font-family: .PingFangSC-Regular;font-size: 12px;color: #7E808A;letter-spacing: 0.8px;line-height: 24px;}
+	.content-text > div{padding:0;}
+	.content-text > div .know-more{font-family: 'SourceHanS-S_Be206bf1321a330';font-size:12px;color: #272831;letter-spacing: 1.37px;margin-bottom:32px;padding-top:15px;}
+	.tl{margin-top:0;margin-bottom:32px;}
+	.tl > li{margin-top:32px;width:100%;}
+	.tl > li > h3{margin-top:16px;font-family: Microsoft YaHei;font-size: 16px;color: #272831;letter-spacing: 1px;}
+	.tl > li > p{margin-top:12px;font-family:PingFangSC-Regular;font-size: 12px;color: #7E808A;letter-spacing: 0.8px;line-height:24px;}
+	.tl > li > .views{margin-top:12px;}
+	.tl > li.tlc{margin-right:0;margin-left:0;}
+	.tl > li > div:first-child{width:70%;margin-left:auto;margin-right:auto;}
+	.tl > li > div > img{}
+	.icon-list{margin-top:0px;padding-bottom:40px;padding-right:15%;padding-left:15%;}
+	.icon-list li{width:22%;margin-right:17%;margin-top:32px;}
+	.icon-list li > p{font-family:PingFangSC-Regular;font-size: 12px;color: #272831;letter-spacing: 0.8px;line-height: 16px;margin-top:13px;}
+	.footer .about-us{height:auto;line-height:normal;padding-bottom:5px;padding-top:5px;}
+	.footer .about-us > span.span1{display:block;font-family:PingFangSC-Regular;font-size:14px;color: #FFFFFF;letter-spacing: 0.8px;line-height:46px;display:none;}
+	.footer .about-us > p{display:none;}
+	.footer .about-us span.span2{display:block;font-family:PingFangSC-Regular;font-size:12px;color: #FFFFFF;letter-spacing: 0.73px;border-right:0}
+	.footer .about-us span.span3{padding-left:0;font-family:PingFangSC-Regular;font-size: 12px;color: #FFFFFF;letter-spacing: 0.73px;line-height:28px;}
+	.footer .about-us > span.span4{display:block;float:none;}
+	.footer .about-us > span.span4 img{margin-left:0;width:18px;}
+	.footer .foot-nav{padding-bottom:0;border-bottom:0}
+	.footer .foot-nav > ul > li{float:none;margin-right:0;width:100%;font-family:PingFangSC-Regular;font-size:14px;color: #FFFFFF;letter-spacing: 0.8px;padding-top:12px;padding-bottom:12px;border-bottom:solid 1px #3d3d47;}
+	.footer .foot-nav > ul > li > ul{padding-top:10px;padding-bottom:10px;display:none;}
+	.footer .foot-nav > ul{margin-top:0;display:none;}
+	.footer .foot ul li{line-height:28px;}
+	.footer .foot ul li a{font-family:PingFangSC-Regular;font-size: 12px;color: #7E808A;letter-spacing: 0.8px;line-height:12px;}
+	.footer .foot p{clear:both;font-family:PingFangSC-Regular;font-size: 12px;color: #7E808A;letter-spacing: 0.8px;line-height:14px;padding-bottom:10px;}
+	.footer .foot{height:auto;line-height:normal;}
+	.footer .foot > div{float:none;}
+	.bannerFade2 .tab-btn,.slidebanner .tab-btn-wap{display:block;margin-left:0;width:100%;text-align:center;bottom:12px;}
+	.bannerFade .tab-btn{bottom:16px;margin-left:0;width:100%;text-align:center;}
+	.bannerFade .tab-btn > li,.slidebanner .tab-btn-wap > li{width:8px;height:8px;margin:auto 6px;}
+
+	.slidebanner-container .tab-btn-wap{display:block;margin-left:0;width:100%;text-align:center;bottom:-28px;}
+	.slidebanner-container .tab-btn{bottom:16px;margin-left:0;width:100%;text-align:center;}
+	.slidebanner-container .tab-btn-wap > li{width:8px;height:8px;margin:auto 6px;}
+
+	.slidebanner-container2 .tab-btn-wap{display:block;margin-left:0;width:100%;text-align:center;bottom:-28px;}
+	.slidebanner-container2 .tab-btn{bottom:16px;margin-left:0;width:100%;text-align:center;}
+	.slidebanner-container2 .tab-btn-wap > li{width:8px;height:8px;margin:auto 6px;}
+
+	.slidebanner-wrap .tab-btn-wap{display:block;}
+
+	.bannerFade > div  h2{font-family:'SourceHanS-S_Be206bf1321a330';font-size:24px;color: #FFFFFF;letter-spacing: 1.6px;line-height:30px;margin-top:0;text-align:left;width:100%;top:50px;padding-left:25px;}
+	.bannerFade > div  .views{margin-top:8px;left:65px;}
+	.bannerFade > div  .views > span a{font-family: 'SourceHanS-S_Be206bf1321a330';font-size: 12px;color: #FFFFFF;letter-spacing: 1.37px;}
+	.bannerFade > div  .container-box{position:relative;}
+	.bannerFade2 > .tip{display:none;}
+	.bannerFade2 > div img:first-child{display:none;}
+	.bannerFade2 > div .slidebanner-phone{display:block;}
+	.slidebanner .bannerFade2 .arrow-left,.innBanner .arrow-left,.innBanner2 .arrow-left{display:none;}
+	.slidebanner .bannerFade2 .arrow-right,.innBanner .arrow-right,.innBanner2 .arrow-right{display:none;}
+	.bannerFade2 .tab-btn > li{width:8px;height:8px;margin:auto 6px;}
+	.bannerFade2 > .phone-tip{display:block;}
+	.slidebanner > .phone-tip-wap{display:block;}
+	#video{width:90%;margin-right:5%;margin-left:5%;left:initial;height:300px;margin-top:-150px;}
+
+	.list .listb > li{float:none;width:100%;}
+	.list .listb > li > .listc > li{float:none;width:100%;margin-right:0}
+	.list .listb > li:first-child{margin-right:0;margin-bottom:40px;}
+	.lrlist{padding-bottom:32px;}
+	.lrlist li{float:none;width:100%;margin-top:24px;}
+	.lrlist li h2{margin-top:0;font-size:24px;}
+	.lrlist li p{padding-right:0;padding-top:16px;padding-bottom:16px;}
+	.lrslist li{width:100%;float:none;padding-bottom:28px;}
+	.title-block{display:none;}
+	.icon-list li > p.piaowu{margin-top:13px;}
+	.icon-list li .icon-list-phone{display:inline-block;}
+	.icon-list li .icon-list-pc{display:none;}
+	.icon-list li svg{display:none;}
+	nav > ul > li > a:hover{border-bottom:solid 1px #D5DAE1}
+	.footer .foot-nav > ul > li > img{display:block;}
+	.footer .foot-nav > ul > li > ul > li > a{font-size:12px;line-height:28px;}
+	.tl > li > div > ul{}
+	.page-top-img > div{display:block;}
+	.page-top-img > h1{display:block;}
+	.page-title{font-size: 24px;letter-spacing: 0.86px;line-height:71px;}
+	.list{padding-bottom:0}
+	.list .listb > li > a > .left-info h4,.list .listb > li > .listc > li > a > h4,.list .addList > li > a > h4{font-size: 18px;letter-spacing: 0.6px;line-height:66px;padding-top:0;padding-bottom:0}
+	.list .listb > li > a > .left-info p{display:none;}
+	.list .listb > li > a > .left-info > .views{margin-top:0;}
+	.list .views > span{font-size:14px;border-bottom: solid 1px #272831;}
+	.list .listb > li:first-child,.list .listb > li > .listc > li{margin-bottom:0;padding-bottom:28px;}
+	.list .listb > li > .listc > .viewMore > a > img,.list-activity > .viewMore > a > img{display:none;}
+	.list .listb > li > .listc > .viewMore > a > h4,.list-activity > .viewMore > a > h4{display:none;}
+	.list .listb > li > .listc > .viewMore > a > i,.list-activity > .viewMore > a > i{display:none;}
+	.list .listb > li > .listc > .viewMore > a > div,.list-activity > .viewMore > a > div{display:block;}
+	.list .listb > li > .listc > .viewMore > a > div > img,.list-activity > .viewMore > a > div > img{display:inline-block;}
+
+	.detail-list .lDetail{width:100%;margin-right:0;}
+	.detail-list .lDetail > .about > li,.inn > .inn-food > li{float:none;width:100%;}
+	.page-detail-title,.inn-more{font-size: 24px;color: #272831;letter-spacing: 0.4px;line-height:42px;padding-top:24px;padding-bottom:24px;width:auto;}
+	.detail-list .lDetail > img{margin-bottom:16px;}
+	.detail-list .lDetail > hr{margin-top:0;margin-bottom:24px;}
+	.detail-list .lDetail > .about > li > a > img,.inn > .inn-food > li > img{width:48px;padding:8px;height:48px;}
+	.detail-list .lDetail > .about > li > a > h5,.inn > .inn-food > li > h5{font-size: 14px;letter-spacing: 0.4px;margin-top:22px;}
+	.detail-list .lDetail > .about > li{margin-bottom:16px;}
+	.detail-list .rList{width:100%;}
+	.detail-list > ul > li{float:none;}
+	.detail-list .rList h4{font-size: 18px;letter-spacing: 0.4px;padding-bottom:24px;}
+	.detail-list .rList > ul > li .celebrity-img-box{width:60px;height:60px;line-height:60px;}
+	.detail-list .rList > ul > li img{}
+	.detail-list .rList > ul > li h5{width:auto;font-size: 14px;letter-spacing: 0.4px;margin-top:5px;margin-left:16px;}
+	.inn{padding-top:24px;}
+	.inn > .inn-content > li{float:none;}
+	.inn > .inn-content .inn-logo img{width:90px;height:90px;border: solid 1px #272831;}
+	.inn > .inn-content .inn-logo{border:none;margin-right:0;text-align:center;}
+	.inn > .inn-content .inn-info{width:100%;margin-right:0;text-align:center;}
+	.inn > .inn-content .inn-info h2{font-size: 24px;letter-spacing: 0.4px;margin-top:24px;}
+	.inn > .inn-content .inn-info span{display:inline-block;margin-top:16px;margin-bottom:16px;}
+	.inn > .inn-content .inn-info p{text-align:left;}
+	.inn > .inn-content .inn-money{margin-top:28px;}
+	.inn > .inn-content .inn-money .money{margin-top:32px;}
+	.inn > .inn-content .inn-money p{margin-top:13px;}
+	.innBanner,.innBanner2{margin-top:27px;overflow:visible;}
+	.innBanner .tab-btn,.innBanner2 .tab-btn{margin-left:0;bottom:-28px;}
+	.innBanner .tab-btn > li,.innBanner2 .tab-btn > li{width:8px;height:8px;margin:0 6px;}
+	.inn > hr{margin-top:24px;margin-bottom:24px;}
+	.inn > .inn-food > li{margin-top:16px;}
+	.inn .views > span > a{font-size: 18px;letter-spacing: 1.03px;}
+	.inn .views > span > a > img{margin-left:8px;}
+	.inn .views{margin-bottom:24px;margin-top:24px;}
+	.inn-more{text-align:left;}
+	.lrslist li h4{font-size: 18px;letter-spacing: 0.4px;line-height:26px;margin-top:24px;padding-bottom:16px;}
+	.lrslist .views > span{border-bottom: solid 1px #272831;}
+
+	.detail-info{padding-bottom:24px;padding-top:24px;margin-bottom:0;}
+	.detail-list .lDetail > p{margin-bottom:24px;}
+	.detail-list .lDetail > b{font-size: 18px;letter-spacing: 0.4px;}
+	.detail-list .lDetail > .download > li > a{color: #272831;}
+	.detail-list .lDetail > .download{margin-top:15px;padding-bottom:28px;}
+	.page-nav li{line-height:24px;}
+	nav{overflow-y:auto;overflow-x:hidden;top:0;}
+	nav > div{display:block;overflow-y:auto;}
+
+	.page-h2{font-size: 18px;letter-spacing: 0.3px;line-height:26px;}
+	.page-h4{font-size: 14px;letter-spacing: 0.62px;}
+	.page-p{letter-spacing: 0.4px;}
+	.introduction h2{margin-top:16px;}
+	.introduction p{margin-top:8px;}
+	.geography .g2{display:none;}
+	.geography .phone-g{display:block;}
+	.geography{padding-top:24px;padding-bottom:24px;}
+	.geography .h41{margin-top:16px;}
+	.geography p{margin-top:8px;}
+	.geography .h42{margin-top:24px;}
+	.geography .g1{width:100%;margin-right:0}
+	.glist{padding-top:24px;padding-bottom:24px;}
+	.glist > h2{font-family: 'SourceHanS-S_Be206bf1321a330';font-size: 18px;color: #272831;letter-spacing: 0.3px;line-height:26px;}
+	.glist > ul > li > div{float:none;}
+	.glist > ul > li > .gl1{width:100%;margin-right:0;}
+	.glist > ul > li > .gl2{width:100%;}
+	.glist > ul > li{margin-top:16px;}
+	.glist > ul > li > .gl2 h4{margin-top:16px;}
+	.glist > ul > li > .gl2 p{margin-top:8px;}
+	.glist > ul > li > .gl1 > .g-phone{display:block;}
+	.glist > ul > li > .gl1 > .pcn{display:none;}
+	.geography2{padding-top:0px;padding-bottom:24px;}
+	.geography2 > h2{margin-top:24px;}
+	.geography2 > p{margin-top:16px;}
+	.history-line{display:none;}
+	.historyBanner{overflow:visible;}
+	.historyBanner > div .h-wap{display:block;}
+	.historyBanner > div .h-pc{display:none;}
+	.historyBanner .arrow-right{display:none;}
+	.historyBanner .arrow-left{display:none;}
+	.historyBanner > div > div{display:none;}
+	.historyBanner > div > h2 > br{display:none;}
+
+	.page-h2-1{font-size: 24px;letter-spacing: 0.3px;line-height:26px;}
+	.history{margin-top:0;padding-top:24px;padding-bottom:24px;margin-top:24px;}
+	.history > div{float:none;}
+	.history .h1{width:100%;margin-right:0;}
+	.history .h2{display:none;}
+	.history .h-phone{display:block;}
+	.history .h1 p{margin-top:16px;}
+	.history2{padding-bottom:24px;padding-top:24px;}
+	.history2 > p{margin-top:16px;}
+	.history2 > div{float:none;margin-top:0}
+	.history2 .hi1{width:100%;margin-right:0;}
+	.history2 .hi1 img{margin-top:16px;}
+	.history2 .hi1 img:last-child{margin-top:16px;}
+	.history2 .hi2{width:100%;}
+	.history2 .hi2 h4{margin-top:16px;}
+	.history2 .hi2 p{margin-top:8px;}
+	.history2 .hi2 h4:first-child{margin-top:16px;}
+	.page-h2-t{padding-top:16px;padding-bottom:16px;}
+	.historyBanner .tab-btn{display:none;}
+	.historyBanner .tab-btn > li{width:8px;height:8px;margin:0 6px;}
+	.historyBanner > div > h2{position:static;margin-top:16px;font-size: 18px;letter-spacing: 0.4px;writing-mode:initial;line-height:24px;height:auto;color: #272831;bottom:-40px;left:auto;top:auto;width:100%;text-align:center;}
+	.historyBanner > div > h2 span{display:none;}
+	.historyBanner > div > p{position:static;margin-top:8px;font-size: 14px;color: #7E808A;letter-spacing: 0.4px;line-height: 28px;top:auto;width:100%;right:auto;text-align:center;bottom:-125px;}
+		
+	.page-img > img{display:block;}
+	.page-img > div{}
+	.page-img > div video{width:100%;}
+
+	.field .fieldBanner{margin-top:24px;}
+	.field .field-p-1{margin-top:48px;}
+	.field h3{font-size: 18px;letter-spacing: 0.3px;}
+	.field .fh3-1{margin-top:24px;}
+	.field h4{font-size:14px;letter-spacing: 0.4px;line-height: 28px;}
+	.field .fh4-1{margin-top:16px;}
+	.field > span{width:24px;margin-top:4px;display:block;}
+
+	.table-img{margin-top:16px;}
+	.field > .table2,.field > .table3{margin-top:16px;}
+	.field .table-tip td{letter-spacing: 0.4px;}
+	.field .table-tip{margin-top:16px;}
+	.field .fh4-2{margin-top:24px;}
+
+	.service{padding-top:24px;padding-bottom:24px;}
+	.service > p{letter-spacing: 0.4px;}
+	.service .service-p1{margin-top:16px;}
+	.service > h3{font-size: 18px;letter-spacing: 0.3px;}
+	.service .service-h31{margin-top:24px;}
+	.service .service-p2{margin-top:16px;}
+	.service > .hr1{margin-top:24px;margin-bottom:24px;}
+	.service > ul > li{width:46%;padding:0 2%;margin-right:0;padding-top:40px;}
+	.service > hr{margin-top:24px;margin-bottom:24px;}
+	.service .views > span > a{font-size:18px;letter-spacing: 1.03px;}
+	.service > ul > li > h4{font-size: 14px;letter-spacing: 0.62px;}
+	.internet > ul{margin-top:0;margin-bottom: 0}
+	.internet > ul > li{width:100%;margin-right:0;margin-top:24px;margin-bottom:0}
+	.internet > ul > li > h3{font-size:18px;letter-spacing: 0.6px;line-height: 26px;margin-top:16px;}
+	.internet > hr{margin-top:24px;margin-bottom:24px;}
+	.internet > .internet-web{margin-top:24px;width:auto;}
+	.internet{padding-bottom:24px;}
+
+	.ph1{font-size: 24px;letter-spacing: 0.3px;}
+	.cultural > h1{padding-top:16px;}
+	.cultural > ul > li{padding-top:16px;padding-bottom:16px;border-bottom:0;}
+	.cultural > ul > li img{float:none;margin-right:0;width:auto;height:auto;}
+	.cultural > ul > li > a > div{float:none;width:100%;}
+	.cultural > ul > li > a h2{font-size: 18px;letter-spacing: 0.4px;line-height: 28px;margin-top:16px;}
+	.cultural > ul > li > a h4{letter-spacing: 0.4px;}
+	.cultural > ul > li > a p{letter-spacing: 0.4px;margin-top:8px;}
+	.cultural > ul > li > a .views{margin-top:16px;}
+	.cultural{padding-bottom:8px;}
+
+	.cultural2{padding-top:24px;}
+	.list-activity > li{width:100%;float:none;margin-right:0;}
+	.cultural2 .list-activity > li{margin-bottom:24px;height:auto;}
+	.cultural2 .list-activity{margin-top:16px;}
+	.list-activity > li h4{font-size: 18px;letter-spacing: 0.4px;line-height: 28px;}
+
+	.festival h1{margin-top:16px;}
+	.ralBox .lb{width:100%;margin-right:0;}
+	.festival .ralBox .lb{margin-top:0px;}
+	.festival .ralBox .lb > img{width:174px;}
+	.ralBox .rb{width:100%;margin-top:24px;}
+	.ralBox > div{float:none;}
+	.exhibition .ralBox{padding-top:24px;padding-bottom:29px}
+	.ralBox .lb-wap{display:block;}
+	.ralBox .lb-pc{display:none;}
+	.exhibition3 .ralBox .rb{margin-top:0;}
+	.exhibition3 .ralBox{padding-top:19px;padding-bottom:29px;}
+	.festival2 .lb h4{margin-top:24px;font-size: 14px;letter-spacing: 0.4px;}
+	.festival2 .lb h4:first-child{margin-top:40px;}
+	.festival2 .lb p{margin-top:8px;font-size: 14px;letter-spacing: 0.4px;}
+	.exhibition3 .ralBox .rb .rbBanner{margin-bottom:48px;}
+
+	.exhibition2{padding-top:19px;padding-bottom:24px;}
+	.exhibition2 .list{margin-top: 16px;}
+	.exhibition2 hr{margin-bottom:24px;}
+	.exhibition2 .zhanlan-info{margin-top:16px;}
+	.exhibition2 .zhanlan-info > div{float:none;}
+	.exhibition2 .zhanlan-info .info-1{margin-right:0;}
+	.exhibition2 .zhanlan-info > div .views{margin-top:16px;}
+	.exhibition2 .zhanlan-info .info-2 > img{margin-top:19px;margin-right:6px;}
+	.exhibition4 .ralBox{padding-top:24px;padding-bottom:24px;}
+	.festival2 .ralBox .lb h3{font-size:14px;letter-spacing:0.3px;}
+	.festival2 .ralBox .lb button, .muxin2 .ralBox .lb button,.muxin3 > ul > li button{font-size:14px;letter-spacing:0.3px;padding:6px 20px 6px 19px;border:1px solid #272831;margin-top:16px;}
+	.festival2 .ralBox .rb h5{font-size:14px;letter-spacing:0.31px;margin-top:24px;padding-right:0;}
+	.festival2 .ralBox .rb .erweima{margin-top:16px;margin-right:auto;margin-left:auto;}
+	.muxin .ralBox{padding-top:24px;padding-bottom:24px;}
+	.muxin2 .ralBox{padding-top:24px;padding-bottom:24px;}
+	.muxin2 .ralBox .lb button{display:block;margin-right:auto;margin-left:auto;}
+	.muxin2 .ralBox .lb h1{display:none;}
+	.muxin2 .ralBox .rb{margin-top:0;}
+	.muxin2 .ralBox .rb img{margin-top:16px;}
+	.muxin3 > p{letter-spacing:0.4px;line-height:28px;margin-top:16px;}
+	.muxin3 > hr{margin-top:24px;margin-bottom:30px;}
+	.muxin3 > ul > li{border-right:0;float:none;}
+	.muxin3 > ul > .li1{padding-right:0;}
+	.muxin3 > ul > .li2{padding-right:0;padding-left:0;}
+	.muxin3 > ul > .li3{padding-left:0;}
+	.muxin3 > ul > li h4,.muxin3 > ul > li h5{font-size:14px;letter-spacing:0.31px;line-height:initial;margin-top:28px;}
+	.muxin3 > ul > li .black-button{background:#ffffff;color:#272831}
+	.muxin3 > ul > li > img{margin-top:16px;display:block;margin-right:auto;margin-left:auto;}
+	.muxin3{padding-top:24px;padding-bottom:24px;}
+	.festival .ralBox{padding-top:24px;padding-bottom:24px;}
+	.festival2 .ralBox .rb{margin-top:0;}
+	.festival2 .ralBox{padding-top:24px;padding-bottom:24px;}
+	.invitational-exhibition .ralBox .rb .rbBanner{}
+
+	.videos-list > li{margin-bottom:24px;}
+	.photos{padding-top:16px;padding-bottom:27px;}
+	.photos h1{margin-top:28px;}
+	.videos-list{margin-top:16px;}
+	.photos2{padding-bottom:3px;}
+	.photo-album .photo-album-play{width:41px;margin-left:-20px;margin-top:-20px;}
+	.videos-list > li .play-btn > .play-btn-img{display:block!important;}
+
+	.notice{padding-top:16px;padding-bottom:40px;}
+	.notice .time-select-list{display:none;}
+	.notice .notice-list{width:100%;margin-right:0;}
+	.notice .notice-list > ul > li .active .notice-date-top{font-size:12px;padding:4px 8px;float:left;}
+	.notice .notice-list > ul > li .notice-date{margin-right:8px;}
+	.notice .notice-list > ul > li h2{float:none;font-size:18px;letter-spacing:0.6px;line-height:26px;overflow:hidden;}
+	.notice .notice-list > ul > li h2 span{display:none;}
+	.notice .notice-list > ul > li .notice-date{display:none;}
+	.notice .notice-list > ul > li .active{display:block;}
+	.notice .notice-list > ul > li{margin-bottom:24px;}
+	.notice .notice-list > ul > li:last-child{margin-bottom:0;}
+	.notice .notice-list > ul > li > .close p{width:100%;margin-left:0;}
+	.news{padding-top:16px;}
+	.news .news-list{width:100%;margin-right:0;}
+	.news .news-list > ul > li:last-child{margin-bottom:0;}
+	.news .news-list > ul > li > a > div{float:none;}
+	.news .news-list > ul > li > a > div > img{width:100%;height:auto;}
+	.news .news-list > ul > li img{width:100%;}
+	.news .news-list > ul > li > a > .news-info{width:100%;margin-left:0;}
+	.news .news-list > ul > li > a > .news-info h2{font-size:18px;overflow:visible;white-space:initial;margin-top:16px;line-height: 28px;}
+	.news .news-list > ul > li > a > .news-info p{margin-top:16px;}
+	.news .news-list > ul > li > div{text-align:left;}
+	.notice .pagination{padding-top:27px;}
+
+	.select-time-wap{display:block;}
+	.list .addList > li{margin-right:0;}
+	.list .listb > li > .listc > li, .list .addList li{float:none;width:100%;}
+
+	.internet .internetBanner{margin-top:24px;}
+
+	/*服务*/
+	.travel-tips-box{padding:0;padding-top:24px;}
+	.travel-tips-box > li{width:47%;margin-right:4.5%;margin-bottom:28px;}
+	.travel-tips-box > li > p{margin-top:8px;}
+	.travel-tips-box > li > .travel-tips-box-views{display:none;}
+
+	/*常用电话*/
+	.travel-tips-phone > ul > li{width:100%;box-sizing:border-box;padding-top:12px;padding-bottom:16px;margin-right:0;margin-bottom:16px;}
+	.travel-tips-phone > ul > li h5{font-size: 14px;letter-spacing: 0.62px;line-height:19px;}
+	.travel-tips-phone > ul > li p{font-size: 20px;letter-spacing:0;line-height:22px;}
+	.travel-tips-reminde > h1,.travel-tips-CCO > h1, .travel-tips-service-point > h1, .travel-tips-phone > h1{font-size:24px;margin-top:13px;}
+	.travel-tips-phone > ul{margin-top:16px;}
+	.travel-tips-phone{padding-bottom:12px;}
+
+	/*CCO*/
+	.travel-tips-CCO .innBanner{margin-top:16px;}
+	.travel-tips-CCO > .COO-info1{width:100%;margin-top:48px;padding-bottom:24px;}
+	.travel-tips-CCO > .COO-info .COO-info-text{width:85%;margin-left:4%;}
+	.travel-tips-CCO > .COO-info > .COO-info-icon{width:10%;text-align:center;}
+	.travel-tips-CCO > .COO-info > .COO-info-icon img{width:32px;}
+	.travel-tips-CCO > .COO-info .COO-info-text ul li:first-child{letter-spacing:0.4px;margin-bottom:8px;line-height:24px;}
+	.travel-tips-CCO > .COO-info .COO-info-text ul li{letter-spacing:0.4px;}
+	.travel-tips-CCO > .COO-info2{margin-top:24px;padding-bottom:24px;}
+
+	.travel-tips-surrounding-traffic{padding-top:16px;padding-bottom:24px;}
+	.travel-tips-surrounding-traffic > h4{margin-top:24px;letter-spacing:0.4px;}
+	.travel-tips-surrounding-traffic > h4:first-child{margin-top:16px;}
+	.travel-tips-surrounding-traffic > .small-mt{margin-top:8px;}
+	.travel-tips-surrounding-traffic > h5{margin-top:28px;}
+	.travel-tips-surrounding-traffic > hr{margin-top:24px;}
+	.travel-tips-surrounding-traffic .route > li{width:69.5%;height:auto;margin-left:15%;position:relative;}
+	.travel-tips-surrounding-traffic .route > li > div > p{padding-right:0;padding-left:0;text-align:center;line-height:35px;}
+	.travel-tips-surrounding-traffic .route > li > span{width:1px;height:68px;margin:auto;}
+	.travel-tips-surrounding-traffic .route > li > p{position:absolute;top:50%;margin-top:-14px;width:100%;background:#ffffff;}
+	.travel-tips-surrounding-traffic > .small-mt{margin-top:24px;}
+	.travel-tips-surrounding-traffic > p{letter-spacing:0.4px;}
+	.travel-tips-surrounding-traffic .company-list{margin-top:16px;}
+	.travel-tips-surrounding-traffic .company-list > li{float:none;margin-right:0;}
+	.travel-tips-surrounding-traffic .company-list > li > p{letter-spacing:0.4px;}
+	.travel-tips-surrounding-traffic .company-list > li > div{margin-top:8px;width:auto;}
+
+	.travel-tips-dongzha > h1{font-size:24px;padding-top:16px;}
+	.travel-tips-dongzha .map-img{padding:0;padding-top:16px;}
+	.travel-tips-dongzha .map-img > span{right:0;}
+	.travel-tips-dongzha .map-img > div{right:0;}
+	.travel-tips-dongzha .map-img p{margin-top:16px;}
+	.travel-tips-dongzha > img{margin-top:16px;}
+	.travel-tips-dongzha .erweima, .travel-tips-scenic-spot-traffic .erweima{margin-top:32px;}
+	.travel-tips-dongzha{padding-bottom:28px;}
+
+	.travel-tips-dongzha > .travel-tips-dongzha-img > div,.table-img > div{display:block;}
+	.travel-tips-dongzha > .travel-tips-dongzha-img > span,.table-img > span{display:block;}
+
+	.self-drive .self-drive-img > div{display:block;}
+	.self-drive .self-drive-img > span{display:block;}
+
+	#video-window .video-content{width:100%;height:250px;margin-left:0;margin-top:-125px;top:50%;left:0px;}
+	#video-window .video-close{right:0;top:0;width:45px;}
+	#video-window .video-content > p{width:100%;margin-left:0;display:none;}
+
+	.travel-tips-reminde > h1{padding-bottom:0;}
+	.travel-tips-reminde hr{margin-top:24px;margin-bottom:24px;}
+
+	.travel_tips_strategy .innBanner{margin-top:25px;}
+	.travel_tips_strategy h1{font-size:24px;margin-top:48px;}
+	.travel_tips_strategy .select-type{text-align:center;padding-bottom:9px;border-bottom:solid 1px #272831;margin-top:24px;}
+	.travel_tips_strategy .select-type ul{display:inline-block;}
+	.travel_tips_strategy .select-type ul li{margin-right:0;}
+	.travel_tips_strategy .select-type ul li:nth-child(2){margin-right:40px;margin-left:40px;}
+	.travel_tips_strategy .select-type ul li a{font-size:14px;color: #272831;}
+	.travel_tips_strategy .select-type .search input{width:85%;font-size:14px;}
+	.travel_tips_strategy .select-type .search{position:static;margin-top:10px;text-align:left;}
+	.travel_tips_strategy .select-type .search img{width:20px;float: right;margin-top: 3px;}
+	.travel_tips_strategy .select-btn{display:none;}
+	.travel_tips_strategy .choose-box{margin-top:0;}
+	.travel_tips_strategy .choose-box li{border:1px solid #272831;margin-right:16px;margin-top:16px}
+	.travel_tips_strategy .strategy-list{margin-top:24px;}
+	.travel_tips_strategy .strategy-list li{padding-top:0;padding-bottom:28px;border-bottom:0;}
+
+	.travel_tips_strategy .strategy-list li a > div{float:none;}
+	.travel_tips_strategy .strategy-list li a .left-img{width:100%;margin-right:0;}
+	.travel_tips_strategy .strategy-list li a .right-content{width:100%;}
+	.travel_tips_strategy .strategy-list li a .right-content h2{font-size: 18px;letter-spacing: 0.6px;line-height: 26px;margin-top:16px;}
+	.travel_tips_strategy .strategy-list li a .right-content > span{margin-top:16px;}
+	.travel_tips_strategy .strategy-list li a .right-content p{margin-top:16px;}
+	.travel_tips_strategy .strategy-list li a .right-content .views{margin-top:16px;}
+	.travel_tips_strategy .pagination{padding-top:0;}
+	.travel_tips_strategy{padding-bottom:32px;}
+
+	.travel_tips_ticket h1{font-size:24px;margin-top:13px;}
+	.travel_tips_ticket h2{font-size:18px;}
+	.travel_tips_ticket .h21{margin-top:16px;}
+	.travel_tips_ticket .lrslist{margin-top:16px;}
+	.travel_tips_ticket .lrslist li{margin-bottom:24px;}
+	.travel_tips_ticket .lrslist li > a > div p{padding:0;margin-top:16px;}
+	.travel_tips_ticket .lrslist li > a > div span{position:static;margin-top:16px;display:inline-block;border:1px solid #272831;}
+	.travel_tips_ticket .h22{margin-top:16px;padding-bottom:8px;}
+	.travel_tips_ticket .tiket-info > div{float:none;width:100%;margin-right:0;}
+	.travel_tips_ticket .page-h4{font-size:18px;}
+	.travel_tips_ticket .tiket-info1 .page-h4 span{font-size:14px;color: #7E808A;}
+	.travel_tips_ticket .tiket-info1 > div > h4{margin-top:24px;}
+	.travel_tips_ticket .views > span{font-size:18px;padding-bottom:8px;}
+	.travel_tips_ticket .center{margin-top:24px;padding-bottom:28px;}
+	.travel_tips_ticket .h23{margin-top:25px;}
+	.travel_tips_ticket .tiket-info{margin-top:16px;}
+	.travel_tips_ticket .tiket-info2 h4 .info{border: 1px solid #272831;}
+	.travel_tips_ticket .tiket-info2 > div > div > span.info{display:inline-block;margin-top:16px;position:static;}
+	.travel_tips_ticket .tiket-info2 h4{margin-top:24px;}
+	.travel_tips_ticket .tiket-info3{display:none;}
+	.travel_tips_ticket .lrslist li > a > div.wechat{padding-top:16px;}
+	.travel_tips_ticket .route{display:block;margin-bottom:40px;padding-top:16px;margin-top:16px;border-top:2px dotted #7E808A;}
+	.travel_tips_ticket .route h4:first-child{margin-top:0;}
+	.travel_tips_ticket .wap-btn{display:block;}
+	.travel_tips_ticket .center1{margin-top:24px;}
+	.tl > li > div > div{}
+
+	.wenhua-title{padding-top:15px;padding-bottom:5px;}
+
+	.friendlink{padding-bottom:12px;}
+	.bottom-h1{margin-top:16px;font-size:24px;}
+	.friendlink-list{margin-top:24px;}
+	.friendlink-list > ul > li{width:46%;margin-right:2%;margin-left:2%;margin-bottom:24px;}
+	.friendlink hr{margin-bottom:24px;}
+	.friendlink .friendlink-list-2 > ul > li{width:auto;margin-right:0;margin-bottom:16px;float:none;}
+	.copyright .bottom-h4{margin-top:20px;padding-bottom:10px;}
+	.copyright p{margin-top:16px;}
+
+	.bottom-h4{font-size:14px;}
+	.investigation .bottom-h4{margin-top:19px;padding-bottom:16px;}
+	.investigation hr{margin-top:14px;margin-bottom:14px;}
+	.investigation textarea{box-sizing:border-box;width:100%;}
+	.investigation .form{margin-top:20px;}
+	.investigation .form .name{box-sizing:border-box;width:54%;margin-right:0}
+	.investigation .form .code{display:inline-block;width:40%;float:right;}
+	.investigation .submit input{padding:15px 52px;}
+	.investigation .hr2{margin-top:32px;margin-bottom:32px;}
+	.investigation{padding-bottom:32px;}
+
+	.suggestions form > div{margin-top:0px;text-align:center;}
+	.suggestions form > div input{margin-top:16px;}
+	.suggestions form > div input[type="text"]{width:100%;margin-right:0;box-sizing:border-box;}
+	.suggestions form > div input[type="submit"]{float:none;margin-top:24px;}
+	.suggestions .bottom-h4{margin-top:24px;}
+	.suggestions form{margin-top:16px;}
+	.suggestions form textarea{padding:12px;min-height:200px;}
+	.suggestions{padding-bottom:24px;}
+
+	.download-list{padding-bottom:35px;}
+	.download-list .pagination{padding-top:28px;}
+	.download-list .search{margin-top:16px;text-align:left;padding-bottom:8.5px;border-bottom: solid 1px #272831;}
+	.download-list .search .search-box img{width:20.5px;float:right;}
+	.download-list > ul > li{padding-top:16px;padding-bottom:8px;}
+	.download-list > ul > li a .views{display:none;}
+	.download-list .search input{font-size:14px;}
+	.download-list .search .search-box button{float:right;}
+	.download-list > ul > li a h2{font-size: 14px;letter-spacing: 0.62px;line-height: 32px;}
+
+
+	.media-login .login-area{margin-top:19px;}
+	.media-login .login-area > div{float:none;}
+	.media-login .login-area .info{width:100%;margin-right:0;}
+	.media-login .login-area .login{width:100%;}
+	.media-login .login-area .login input[type="text"]{box-sizing:border-box;width:100%;height:64px;}
+	.media-login .login-area .info .contact{margin-top:16px;}
+	.media-login .login-area .login input[type="text"]{margin-bottom:16px;}
+	.media-login .login-area .login{margin-top:24px;}
+	.media-login .login-area .login form > span{width:40%;}
+	.media-login{padding-bottom:32px;}
+
+	.web-map > ul li{float:none;margin-right:0;margin-top:16px;}
+	.web-map > ul{margin-top:0;margin-bottom:0;padding-bottom:24px;}
+	.web-map h2{font-size:18px;}
+	.faq .faq-teb li a{font-size:18px;letter-spacing:0.4px;padding-right:16px;padding-left:16px;margin:0;height:36px;}
+	.faq .faq-teb{margin-top:16px;height:36px;}
+	.faq .faq-list li{padding-top:16px;padding-bottom:12px;}
+	.faq .faq-list{margin-top:9px;}
+	.faq h4 p{width:89%;}
+	.faq h3 p{width:87%;}
+	.tongyong .pagination, .faq .pagination{padding-top:35px;}
+	.faq,.edu,.Honors,.tongyong,.bookarea{padding-bottom:32px;}
+
+	.edu > ul > li > a > div{float:none;}
+	.edu > ul > li > a > .img-box{display:none;}
+	.edu > ul > li > a > .content{width:100%;}
+	.edu > ul > li > a > .content h2{font-size: 14px;letter-spacing: 0.47px;line-height: 28px;}
+	.edu > ul > li > a > .content p{margin-top:8px;}
+	.edu > ul > li{padding-top:17px;padding-bottom:16px;}
+
+	.four-list li{width:100%;float:none;margin-right:0;margin-top:24px;}
+	.four-list li img{width:100%;}
+
+	.post .container{width:auto;}
+	.post .container .gangzhang h3{margin-top:16px;}
+	.post .container .gangzhang h3.name{font-size:18px;}
+	.post .container .gangzhang{padding-top:8px;}
+	.post .container .gangzhang img{margin-top:16px;width:200px;}
+	.post .container .gangzhang h3 span{margin-top:8px;}
+	.post .container .gangzhang .dp1{margin-top:8px;}
+	.post .container > ul{padding-right:15px;padding-left:15px;}
+	.post .container > ul > li{margin-bottom:32px;width:46%;margin-right:8%;}
+	.post{padding-bottom:0;}
+
+	.qiaoye .innBanner{margin-top:16px;}
+	.qiaoye .img-box1{margin-right:0;margin-bottom:16px;}
+	.qiaoye .img-box{width:100%;}
+	.qiaoye .ph1-2{margin-top:24px;padding-bottom:16px;}
+	.qiaoye{padding-bottom:24px;}
+	.qiaoye .img-box span{display:block;}
+	.qiaoye .img-box div{display:block;}
+
+	.search-window .close{width:22px;top:21px;right:20px;} 
+	.search-window .input-area{left:auto;width:90%;margin-right:5%;margin-left:5%;top:40%;}
+	.search-window .input-area .input input{width:100%;padding:16px 14px;box-sizing:border-box;}
+	.search-window .input-area p{margin-top:28px;}
+	.search-window .input-area .input img{display:none;}
+	.search-window .input-area > ul > li{margin-right:42px;}
+	.search-window .btn{display:block;position:fixed;bottom: 24px;z-index: 10001;width: 90%;margin-right: 5%;margin-left: 5%;font-family: Microsoft YaHei;font-size: 14px;color: #272831;letter-spacing: 0.8px;padding:15px 0;background:#ffffff;border-radius:4px;-webkit-appearance: none;-webkit-border-radius:4px;}
+
+	.search-result .search-area{width:100%;box-sizing:border-box;}
+	.search-result .search-area .input input{width:80%;box-sizing: border-box;padding:16px;}
+	.search-result .search-area .input img{display:none;}
+	.search-result > p{margin-top:22px;}
+	.search-result > ul > li{padding-top:16px;padding-bottom:16px;}
+
+	.tourist-industry h1{padding-bottom:24px;margin-top:16px;}
+	.tourist-industry .interduce > div{float:none;}
+	.tourist-industry .interduce .img-box{display:none}
+	.tourist-industry .interduce .img-box1{display:block;text-align:center;}
+	.tourist-industry .interduce .img-box1 img{width:150px;}
+	.tourist-industry .interduce .info{width:100%;margin-right:0;margin-top:16px;}
+	.tourist-industry hr{margin-top:24px;}
+	.tourist-industry h2{margin-top:16px;}
+	.tourist-industry h2{font-size:14px;line-height:28px;}
+	.tourist-industry h2 span{margin-top:4px;width:24px;}
+	.tourist-industry p{margin-top:8px;}
+	.tourist-industry .interduce .info p{margin-top:28px;}
+	.tourist-industry3 .book .info h4{font-size:18px;}
+	.tourist-industry3 .book{display:block;width:100%;box-sizing:border-box;padding:16px;}
+	.tourist-industry3 .book .info span{margin-top:8px;}
+	.tourist-industry3 .book:first-child{margin-right:0;}
+	.tourist-industry3 .book1{display:none;}
+	.tourist-industry3 .four-list li{float:left;margin-right:4%;width:48%;margin-bottom:24px;}
+	.tourist-industry3 .four-list li h6{font-size:14px;margin-top:12px;}
+
+	.volunteer .innBanner{margin-top:16px;}
+	.volunteer h1{margin-top:16px;}
+	.volunteer .content{margin-top:40px;}
+	.volunteer p{margin-top:32px;}
+	.volunteer hr{margin-bottom:25px;margin-top:25px;}
+	.volunteer > ul > li{float:none;width:100%;padding-bottom:25px;}
+	.volunteer > ul > li .line1{display:none;}
+	.volunteer > ul > li .line2{display: none;}
+	.cooperation h4{margin-top:48px;}
+	.cooperation{padding-bottom:32px;}
+	.cooperation h1{text-align:center;margin-top:16px;}
+	.cooperation .innBanner,.cooperation .innBanner2{margin-top:16px;}
+	.advice p{margin-top:16px;}
+	.advice > img{margin-top:16px;}
+	.advice{padding-bottom:32px;}
+
+	.recruit-detail .tip, .recruit .tip,.job-fuli p.tip,.zhaoshang p.tip{margin-top:8px;}
+	.recruit .job-list li{margin-bottom:16px;position:relative;width:100%;float:none;box-sizing:border-box;padding:12px;}
+	.recruit .job-list li a h3{font-size:14px;}
+	.recruit .job-list li a h3 span{display:block;float:none;margin-top:10px;}
+	.recruit .job-list li a h3 span img{vertical-align:middle;}
+	.recruit .job-list li a h3 span span{position:absolute;top:12px;right:12px;}
+	.recruit .job-list li a .span span{font-size:12px;}
+	.recruit .job-list li a > p{margin-top:4px;}
+	.recruit .fuli,.zhaoshang .fqa-box{width:auto;}
+	.recruit .tip2{margin-top:24px;font-size:14px;}
+	.recruit table{margin-top:24px;}
+	.recruit-detail,.recruit{padding-bottom:24px;}
+	.recruit .pc-table,.zhaoshang .pc-table{display:none;}
+	.recruit .wap-table,.zhaoshang .wap-table{display:block;}
+	.recruit-detail table tr .td2,.recruit table tr .td2,.zhaoshang table tr .td2{padding-left:15px;font-family: ArialMT,Arial;font-size: 14px;color: #272831;letter-spacing: 0.4px;}
+	.recruit-detail table tr .td1,.recruit table tr .td1,.zhaoshang table tr .td1{padding-left:15px;font-family: Microsoft YaHei;font-size: 14px;color: #272831;letter-spacing: 0.62px;}
+	.recruit-detail table tr .td1 img,.recruit table tr .td1 img,.zhaoshang table tr .td1 img{width:18px;vertical-align:middle;}
+	.recruit .job-list li a .time{position:static;font-size:12px;margin-top:4px;display:inline-block;}
+
+	.recruit-detail .job-info{margin-top:24px;padding:12px;position:relative;}
+	.recruit-detail .job-info > div{width:auto;display:block;}
+	.recruit-detail .job-info > div > span > span{position:absolute;top:12px;right:12px;}
+	.recruit-detail .job-info > div.div{font-size:14px;margin-top:4px;}
+	.recruit-detail .job-info > div > span{margin-top:9px;display:inline-block;}
+	.recruit-detail .job-info > div > span img{margin-top:-3px;}
+	.recruit-detail .job-info .time{margin-top:4px;}
+	.recruit-detail .detail h3{margin-top:25px;}
+	.recruit-detail .detail p.p1{margin-top:11px;}
+	.recruit-detail hr{margin-top:24px;margin-bottom:24px;}
+	.recruit-detail .pc-table{display:none;}
+	.recruit-detail .wap-table{display:block;}
+	.job-fuli > ul > li{padding-top:24px;}
+
+	.bookarea .book-info h4{display:none;}
+	.bookarea .book-info .content{display:none;}
+	.bookarea .book-main{border: solid 1px #ccc;padding: 16px;position:relative;margin-top:16px;}
+	.bookarea .book-info h2{font-size: 18px;letter-spacing: 0.6px;padding-top:0;line-height:24px;}
+	.bookarea .book-info > span{margin-top:8px;}
+	.bookarea .book-img{width:32%;margin-right:5%;}
+	.bookarea .book-info > p{line-height:14px;}
+	.bookarea .book-info{width:62%;}
+	.bookarea .book-info .wap-download{display:inline-block;position:absolute;bottom:16px;right:16px;}
+	.bookarea > h2{font-size:14px;line-height:40px;background: #F3F4F8;padding:0 8px;}
+	.bookarea > h2 .select-time-pc{display:none;}
+	.bookarea > h2 > span{display:none;}
+
+	.bookarea .four-list li{float:left;width:40.5%;margin-right:4.5%;margin-left:4.5%;}
+	.bookarea .four-list li .views{display:none;}
+	.bookarea .pagination{padding-top:35px;}
+
+	.zhaoshang h2{font-size:24px;}
+	.zhaoshang .place-list li{float:none;width:100%;margin-right:0;margin-top:24px;}
+	.zhaoshang .place-list li > a > div{width:100%;float:none;}
+	.zhaoshang .place-list li > a > div > img{width:100%;}
+	.zhaoshang .place-list li > a > .content h3{font-size:24px;margin-top:16px;}
+	.zhaoshang .place-list li > a > .content h4{margin-top:8px;font-size: 14px;}
+	.zhaoshang .place-list li > a > .content p{margin-top:8px;}
+	.zhaoshang hr{height:1px;margin-top:24px;margin-bottom:24px;}
+	.zhaoshang .p1{font-size:14px;}
+	.zhaoshang .wap-table{margin-top:24px;}
+	.zhaoshang table tr .td2{padding-right:15px;}
+	.zhaoshang .fqa-box{margin-top:24px;}
+	.zhaoshang .bannerwap{display:flex;}
+	.zhaoshang .bannerpc{display:none;}
+	.zhaoshang .bannerwap h4{font-family: Microsoft YaHei;font-size: 18px;color: #272831;letter-spacing: 0.4px;text-align:center;margin-top:16px;}
+	.zhaoshang .bannerwap p{text-align:center;margin-top:8px;}
+
+	.zhaoshang-q .p1{margin-top:24px;}
+	.zhaoshang-q > ul > li{padding-top:32px;}
+	.zhaoshang-q .liucheng li{position:relative;text-align:center;padding-bottom:5px;margin-bottom:30px;}
+	.zhaoshang-q .liucheng li > div > div{float:none;}
+	.zhaoshang-q .liucheng li > div > div.d1 .line-right{display:none;}
+	.zhaoshang-q .liucheng li > div > div.d1{border: 1px solid #272831;position:static;margin-right:auto;margin-bottom:8px;}
+	.zhaoshang-q .liucheng li > div > div{border:none;display:block;margin-left:auto;margin-right:auto;}
+	.zhaoshang-q .liucheng li > div > div.d1 .line-bottom{bottom:0;}
+
+	.zhaoshang-q{padding-bottom:24px;}
+	.zhaoshang-q .tip{margin-top:24px;}
+	
+	.travel-tips-scenic-spot-traffic .map-img > span{display:block;}
+	.travel-tips-scenic-spot-traffic .map-img > div{display:block;}
+
+	.inn > .inn-food > li > a > img{width:48px;padding:8px;}
+	.inn > .inn-food > li > a > h5{width:75%;margin-top:0;vertical-align:middle;}
+
+	.travel-tips-service-point > img{margin-top:24px;}
+	.travel-tips-service-point > b{margin-top:24px;}
+	.travel-tips-service-point{padding-bottom:32px;}
+
+	.self-drive > hr{margin-top:24px;}
+	.self-drive > h4{padding-top:24px;}
+	.self-drive{padding-bottom:32px;}
+
+	.web-map h1{padding-bottom:24px;}
+	.faq h3{font-size:14px;line-height:28px;}
+
+	.friendlink-list > ul > li p, .friendlink-list > ul > li .views > span{font-size:14px;}
+	.post .container > ul > li h4{margin-top:16px;line-height:18px;}
+	.qiaoye .ph1-1{padding-bottom:24px;}
+	.tourist-industry2 .travel-tips-box > li > img{width:40px;}
+	.cooperation p{margin-top:12px;}
+	.recruit .job-list li a .span span{line-height:16px;padding-left:0;padding-right:5px;}
+
+	.travel_tips_strategy .select-btn{margin-top:10px;padding-bottom:10px;}
+	.travel_tips_strategy .select-btn ul li{float:none;margin-right:0;}
+	.travel_tips_strategy .select-btn ul li a{line-height:32px;font-size:16px;}
+	.travel_tips_strategy .select-btn > img{top:0;bottom:auto;}
+
+	.photos-area .tab-photos{bottom:30px;top:auto;width:100%;right:0;}
+	.photos-area .tab-photos span{font-size:14px;}
+	.photos-area .small-img-area{bottom:auto;top:100px;}
+	.photos-area .tab-photos .pre{position:absolute;left:17px;margin-right:0;bottom:0px;right}
+	.photos-area .tab-photos .next{position:absolute;right:17px;margin-right:0;bottom:0px;}
+	.photos-area .tab-photos .pre img,.photos-area .tab-photos .next img{vertical-align:middle;}
+	.photos-area .small-img-area-bg{opacity:1;}
+	.small-img-area ul{margin-left:0;position:relative;}
+	.small-img-area ul li{margin-right:0;margin-left:0;}
+	.small-img-area .img-list-container{margin-right:0;margin-left:0;}
+	.small-img-area ul li img{opacity:1;}
+	.photos-area .go-pre{top:34%;left:16px;margin-top:auto;width:18px;}
+	.photos-area .go-next{top:34%;right:16px;margin-top:auto;width:18px;}
+	.small-img-area p{font-size:14px;line-height:28px;letter-spacing:0.4px;padding-right:16px;padding-left:16px;margin-top:16px;}
+
+	.open-img-mask .next{width:18px;margin-top:-17px;}
+	.open-img-mask .pre{width:18px;margin-top:-17px;}
+	.open-img-mask .close{width:32px;top:30px;right:30px;}
+
+	.media-login .login-area .login form > span > img{height:64px;}
+	.recruit-detail .job-info > div > span > img{width:18px;}
+
+	/*手机端滑动样式*/
+	.slidebanner{position:relative;}
+	.bannerFade2{display:flex;}
+	.bannerFade2 > div{width:100%;position:static;}
+	.photos-area .small-img-area-bg{height:auto;top:0;}
+	.photos-area .img-box{display:none;}
+
+	.innBanner2, .bannerFade, .innBanner, .historyBanner{display:flex;}
+	.bannerFade > div, .innBanner > div, .innBanner2 > div, .historyBanner > div{width:100%;position:static;}
+	
+	.travel-tips-scenic-spot-traffic .travel_tips_ticket .tiket-info3{display:block;}
+
+	.list .listb > li > .listc > li > a h4 > b,.list .addList > li > a h4 > b{width:35px;height:24px;line-height:24px;font-size:12px;border:1px solid #272831;}
+	.list .listb > li > a h4 > b{width:35px;height:24px;font-size: 12px;border:1px solid #272831;line-height:24px;}
+
+	.videos-list > li .play-btn{height:auto;}
+	.videos-list > li .play-btn .s-banner{height:auto;width:auto;}
+
+	/*新加CSS*/
+	.list .listb > li > .listc > li > a > img{width:100%;height:auto;}
+
+	.slidebanner-wrap{overflow-x:hidden;}
+	.slidebanner{overflow-x:hidden;}
+	.cultural2 .list-activity > li > a > img{width:100%;height:auto;}
+	.volunteer .p{padding:0;}
+	.list .listb > li:first-child > a > img{width:100%;height:auto;}
+
+	.Honors .four-list li img{width:100%;height:auto;}
+	.inn > p{margin-top:15px;}
+}	
+
+@media only screen and (max-width:420px){
+	.travel-tips-box > li > img{width:40px;}
+	.travel-tips-box > li > p{font-size:14px;}
+
+	.tourist-industry3 .book .info{margin-left:10px;}
+}
+
+@media only screen and (max-width:380px){
+	
+}
+
+@media only screen and (max-width:361px){
+	.icon-list li{width:26%;margin-right:11%;}
+}
+
+@media only screen and (max-width:350px){
+	.search-window .close{
+		top: 3px;
+		right: 12px;
+	}
+	nav .phone-menu span{margin-right:20px;}
+	.footer .about-us > span.span4{float:none;display:block;text-align:left;}
+	.footer .about-us > span.span4 img{width:10%;}
+	.historyBanner{}
+	.historyBanner > div > p{bottom:-160px;}
+	.travel-tips-surrounding-traffic .company-list > li > div > h5{font-size:14px;}
+	.detail-list .rList > ul > li h5{width: 70%;margin-top:0;}
+	.internet > .internet-web{width:auto;}
+	.notice .notice-list > ul > li h2{width:80%;}
+	.faq .faq-teb li a{padding-right:10px;padding-left:10px;}
+
+	.tourist-industry3 .book .info{margin-left:4px;}
+}

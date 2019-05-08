@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
+    <script type="text/javascript" th:src="@{/script/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/layui/layui.js}"></script>
+    <title>房间添加</title>
+    <style>
+        #roomForm {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<form class="layui-form" id="roomForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="roomHotelName">酒店名称</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomHotelName" id="roomHotelName" lay-verify="required|checkHotelExist" placeholder="请输入名称" autocomplete="off" class="layui-input">
+        </div>
+        <label class="layui-form-label" for="roomType">房型</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomType" id="roomType" lay-verify="required" placeholder="请输入房型" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="roomBedType">床型</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomBedType" id="roomBedType" lay-verify="required" placeholder="请输入床型" autocomplete="off" class="layui-input">
+        </div>
+        <label class="layui-form-label" for="roomBreakfast">早餐</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomBreakfast" id="roomBreakfast" lay-verify="required" placeholder="请输入早餐" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="roomArea">房间面积</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomArea" id="roomArea" lay-verify="required" placeholder="请输入面积" autocomplete="off" class="layui-input">
+        </div>
+        <label class="layui-form-label" for="roomPrice">房价</label>
+        <div class="layui-input-inline">
+            <input type="text" name="roomPrice" id="roomPrice" lay-verify="required|number" placeholder="请输入房价" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">发布状态</label>
+        <div class="layui-input-block">
+            <input type="checkbox" name="roomStatus" value="1" lay-skin="switch" lay-filter="required" lay-text="发布|保存">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="sub">确定</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form;
+        var layer = layui.layer;
+        //提交表单
+        form.on('submit(sub)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: '[[@{/admin/room}]]',
+                data: $("#roomForm").serialize(),
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 0) {
+                        var id = layer.msg("添加成功",{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    } else {
+                        var id = layer.msg("添加失败",{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+        //自定义验证规则
+        form.verify({
+            checkHotelExist:function (value) {
+                var exist = false;
+                $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: '[[@{/admin/hotelExist/}]]' + value,
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.code == 0) {
+                            exist = true;
+                        }
+                    }
+                });
+                if(!exist)
+                    return "该酒店不存在!";
+            }
+        });
+    });
+</script>
+</body>
+</html>

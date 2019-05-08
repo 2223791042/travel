@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="guet.hj.travel.dao.RoomMapper" >
+  <resultMap id="BaseResultMap" type="guet.hj.travel.entity.Room" >
+    <id column="room_id" property="roomId" jdbcType="BIGINT" />
+    <result column="room_type" property="roomType" jdbcType="VARCHAR" />
+    <result column="room_bed_type" property="roomBedType" jdbcType="VARCHAR" />
+    <result column="room_breakfast" property="roomBreakfast" jdbcType="VARCHAR" />
+    <result column="room_area" property="roomArea" jdbcType="VARCHAR" />
+    <result column="room_price" property="roomPrice" jdbcType="DECIMAL" />
+    <result column="room_hotel_name" property="roomHotelName" jdbcType="VARCHAR" />
+    <result column="room_hotel_id" property="roomHotelId" jdbcType="BIGINT" />
+    <result column="room_status" property="roomStatus" jdbcType="VARCHAR" />
+    <result column="room_release" property="roomRelease" jdbcType="VARCHAR" />
+    <result column="room_release_time" property="roomReleaseTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    room_id, room_type, room_bed_type, room_breakfast, room_area, room_price, room_hotel_name, 
+    room_hotel_id, room_status, room_release, room_release_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="guet.hj.travel.entity.RoomExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from room
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from room
+    where room_id = #{roomId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from room
+    where room_id = #{roomId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="guet.hj.travel.entity.RoomExample" >
+    delete from room
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="guet.hj.travel.entity.Room" >
+    insert into room (room_id, room_type, room_bed_type, 
+      room_breakfast, room_area, room_price, 
+      room_hotel_name, room_hotel_id, room_status, 
+      room_release, room_release_time)
+    values (#{roomId,jdbcType=BIGINT}, #{roomType,jdbcType=VARCHAR}, #{roomBedType,jdbcType=VARCHAR}, 
+      #{roomBreakfast,jdbcType=VARCHAR}, #{roomArea,jdbcType=VARCHAR}, #{roomPrice,jdbcType=DECIMAL}, 
+      #{roomHotelName,jdbcType=VARCHAR}, #{roomHotelId,jdbcType=BIGINT}, #{roomStatus,jdbcType=VARCHAR}, 
+      #{roomRelease,jdbcType=VARCHAR}, #{roomReleaseTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="guet.hj.travel.entity.Room" >
+    insert into room
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roomId != null" >
+        room_id,
+      </if>
+      <if test="roomType != null" >
+        room_type,
+      </if>
+      <if test="roomBedType != null" >
+        room_bed_type,
+      </if>
+      <if test="roomBreakfast != null" >
+        room_breakfast,
+      </if>
+      <if test="roomArea != null" >
+        room_area,
+      </if>
+      <if test="roomPrice != null" >
+        room_price,
+      </if>
+      <if test="roomHotelName != null" >
+        room_hotel_name,
+      </if>
+      <if test="roomHotelId != null" >
+        room_hotel_id,
+      </if>
+      <if test="roomStatus != null" >
+        room_status,
+      </if>
+      <if test="roomRelease != null" >
+        room_release,
+      </if>
+      <if test="roomReleaseTime != null" >
+        room_release_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roomId != null" >
+        #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="roomType != null" >
+        #{roomType,jdbcType=VARCHAR},
+      </if>
+      <if test="roomBedType != null" >
+        #{roomBedType,jdbcType=VARCHAR},
+      </if>
+      <if test="roomBreakfast != null" >
+        #{roomBreakfast,jdbcType=VARCHAR},
+      </if>
+      <if test="roomArea != null" >
+        #{roomArea,jdbcType=VARCHAR},
+      </if>
+      <if test="roomPrice != null" >
+        #{roomPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="roomHotelName != null" >
+        #{roomHotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="roomHotelId != null" >
+        #{roomHotelId,jdbcType=BIGINT},
+      </if>
+      <if test="roomStatus != null" >
+        #{roomStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="roomRelease != null" >
+        #{roomRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="roomReleaseTime != null" >
+        #{roomReleaseTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="guet.hj.travel.entity.RoomExample" resultType="java.lang.Integer" >
+    select count(*) from room
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update room
+    <set >
+      <if test="record.roomId != null" >
+        room_id = #{record.roomId,jdbcType=BIGINT},
+      </if>
+      <if test="record.roomType != null" >
+        room_type = #{record.roomType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomBedType != null" >
+        room_bed_type = #{record.roomBedType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomBreakfast != null" >
+        room_breakfast = #{record.roomBreakfast,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomArea != null" >
+        room_area = #{record.roomArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomPrice != null" >
+        room_price = #{record.roomPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="record.roomHotelName != null" >
+        room_hotel_name = #{record.roomHotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomHotelId != null" >
+        room_hotel_id = #{record.roomHotelId,jdbcType=BIGINT},
+      </if>
+      <if test="record.roomStatus != null" >
+        room_status = #{record.roomStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomRelease != null" >
+        room_release = #{record.roomRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roomReleaseTime != null" >
+        room_release_time = #{record.roomReleaseTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update room
+    set room_id = #{record.roomId,jdbcType=BIGINT},
+      room_type = #{record.roomType,jdbcType=VARCHAR},
+      room_bed_type = #{record.roomBedType,jdbcType=VARCHAR},
+      room_breakfast = #{record.roomBreakfast,jdbcType=VARCHAR},
+      room_area = #{record.roomArea,jdbcType=VARCHAR},
+      room_price = #{record.roomPrice,jdbcType=DECIMAL},
+      room_hotel_name = #{record.roomHotelName,jdbcType=VARCHAR},
+      room_hotel_id = #{record.roomHotelId,jdbcType=BIGINT},
+      room_status = #{record.roomStatus,jdbcType=VARCHAR},
+      room_release = #{record.roomRelease,jdbcType=VARCHAR},
+      room_release_time = #{record.roomReleaseTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="guet.hj.travel.entity.Room" >
+    update room
+    <set >
+      <if test="roomType != null" >
+        room_type = #{roomType,jdbcType=VARCHAR},
+      </if>
+      <if test="roomBedType != null" >
+        room_bed_type = #{roomBedType,jdbcType=VARCHAR},
+      </if>
+      <if test="roomBreakfast != null" >
+        room_breakfast = #{roomBreakfast,jdbcType=VARCHAR},
+      </if>
+      <if test="roomArea != null" >
+        room_area = #{roomArea,jdbcType=VARCHAR},
+      </if>
+      <if test="roomPrice != null" >
+        room_price = #{roomPrice,jdbcType=DECIMAL},
+      </if>
+      <if test="roomHotelName != null" >
+        room_hotel_name = #{roomHotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="roomHotelId != null" >
+        room_hotel_id = #{roomHotelId,jdbcType=BIGINT},
+      </if>
+      <if test="roomStatus != null" >
+        room_status = #{roomStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="roomRelease != null" >
+        room_release = #{roomRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="roomReleaseTime != null" >
+        room_release_time = #{roomReleaseTime,jdbcType=DATE},
+      </if>
+    </set>
+    where room_id = #{roomId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="guet.hj.travel.entity.Room" >
+    update room
+    set room_type = #{roomType,jdbcType=VARCHAR},
+      room_bed_type = #{roomBedType,jdbcType=VARCHAR},
+      room_breakfast = #{roomBreakfast,jdbcType=VARCHAR},
+      room_area = #{roomArea,jdbcType=VARCHAR},
+      room_price = #{roomPrice,jdbcType=DECIMAL},
+      room_hotel_name = #{roomHotelName,jdbcType=VARCHAR},
+      room_hotel_id = #{roomHotelId,jdbcType=BIGINT},
+      room_status = #{roomStatus,jdbcType=VARCHAR},
+      room_release = #{roomRelease,jdbcType=VARCHAR},
+      room_release_time = #{roomReleaseTime,jdbcType=DATE}
+    where room_id = #{roomId,jdbcType=BIGINT}
+  </update>
+</mapper>

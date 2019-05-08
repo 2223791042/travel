@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
+    <script type="text/javascript" th:src="@{/script/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/layui/layui.js}"></script>
+    <link th:href="@{/kindeditor/themes/default/default.css}" type="text/css" rel="stylesheet">
+    <script th:src="@{/kindeditor/kindeditor-all-min.js}"></script>
+    <script th:src="@{/kindeditor/lang/zh-CN.js}"></script>
+    <title>新闻修改</title>
+    <style>
+        .ke-container.ke-container-default{
+            width: 98%!important;
+            margin-left: 0.8%!important;
+        }
+    </style>
+</head>
+<body>
+<form class="layui-form" id="newsForm" style="margin-top: 30px;">
+    <div style="margin-left: 43.5%;margin-bottom: 20px;width: 150px;height: 100px;">
+        <img th:src="${news.newsImage}" width="100%" height="100%">
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新闻图片</label>
+        <div class="layui-input-block">
+            <input type="file" name="img" autocomplete="off" class="layui-input"/>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新闻标题</label>
+        <div class="layui-input-block">
+            <input type="text" th:value="${news.newsTitle}" required  readonly  autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新闻摘要</label>
+        <div class="layui-input-block">
+            <input type="text" name="newsBrief" th:value="${news.newsBrief}" id="newsBrief" required  lay-verify="required" placeholder="请输入新闻摘要" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新闻关键字</label>
+        <div class="layui-input-block">
+            <input type="text" name="newsKey" th:value="${news.newsKey}" id="newsKey" required  lay-verify="required" placeholder="请输入新闻关键字" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">新闻类型</label>
+        <div class="layui-input-inline">
+            <select  name="newsLabelId" lay-verify="required">
+                <option value="">请选择新闻类型</option>
+                <option th:each="newsLabel : ${newsLabelList}" th:selected="${news.newsLabelId eq newsLabel.labelId}" th:value="${newsLabel.labelId}" th:text="${newsLabel.labelName}"></option>
+            </select>
+        </div>
+        <label class="layui-form-label">发布时间</label>
+        <div class="layui-input-inline">
+            <input type="text" name="newsTime" th:value="${#dates.format(news.newsTime,'yyyy-MM-dd')}" id="newsTime" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <textarea name="newsContent" id="newsContent" th:text="${news.newsContent}" lay-verify="newsContent" style="height: 400px" ></textarea>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="margin-left: 44.5%;">
+            <span class="layui-btn layui-btn-radius layui-btn-warm" onclick="save()">保存</span>
+            <button class="layui-btn layui-btn-radius" lay-submit="" lay-filter="sub">发布</button>
+        </div>
+    </div>
+</form>
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('#newsContent',{
+            minHeight:'350px',
+            allowFileManager : true,
+            uploadJson : '[[@{/admin/news/image}]]',
+            afterUpload: function(){this.sync();}, //图片上传后，将上传内容同步到textarea中
+            afterBlur: function(){this.sync();},   ////失去焦点时，将上传内容同步到textarea中
+        });
+    });
+    var layer;
+    layui.use(['form', 'laydate'], function () {
+        var form = layui.form;
+        layer = layui.layer;
+        var laydate = layui.laydate;
+        //日期
+        laydate.render({
+            elem: '#newsTime'
+        });
+        //提交表单
+        form.on('submit(sub)', function (data) {
+            console.log(new FormData($("#newsForm")[0]));
+            $.ajax({
+                type: "PUT",
+                url: '[[@{/admin/news/}]]' + "[[${news.newsId}]]?type=release",
+                data: new FormData($("#newsForm")[0]),
+                processData: false,
+                contentType: false,
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 0) {
+                        var id = layer.msg('发布成功',{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    } else {
+                        var id = layer.msg('发布失败',{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+        //自定义验证规则
+        form.verify({
+            newsContent: function (value) {
+                editor.sync();
+            }
+        });
+    });
+    function save() {
+        editor.sync();
+        $.ajax({
+            type: "PUT",
+            url: '[[@{/admin/news/}]]'+"[[${news.newsId}]]?type=save",
+            data: new FormData($("#newsForm")[0]),
+            processData: false,
+            contentType: false,
+            dataType: "json",
+            success: function (result) {
+                if (result.code == 0) {
+                    var id = layer.msg('保存成功',{
+                        time:false,
+                        btn:['知道了'],
+                        yes:function () {
+                            layer.close(id);
+                        }
+                    });
+                } else {
+                    var id = layer.msg('保存失败',{
+                        time:false,
+                        btn:['知道了'],
+                        yes:function () {
+                            layer.close(id);
+                        }
+                    });
+                }
+            }
+        });
+
+    }
+</script>
+</body>
+</html>

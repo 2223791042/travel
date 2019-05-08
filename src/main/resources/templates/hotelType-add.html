@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
+    <script type="text/javascript" th:src="@{/script/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/layui/layui.js}"></script>
+    <title>酒店类型添加</title>
+    <style>
+        #hotelTypeForm {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<form class="layui-form" id="hotelTypeForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="typeName">酒店类型</label>
+        <div class="layui-input-inline" style="width: 260px;">
+            <input type="text" name="typeName" id="typeName" lay-verify="required|checkTypeName" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="margin-left: 200px;">
+            <button class="layui-btn" lay-submit="" lay-filter="sub">确定</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use(['form'], function () {
+        var form = layui.form;
+        var layer = layui.layer;
+        //提交表单
+        form.on('submit(sub)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: '[[@{/admin/hotelType}]]',
+                data: $("#hotelTypeForm").serialize(),
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 0) {
+                        var id = layer.msg("添加成功",{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    } else {
+                        var id = layer.msg("添加失败",{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+        //自定义验证规则
+        form.verify({
+            checkTypeName:function (value) {
+                var exist = false;
+                $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: '[[@{/admin/hotelType/checkTypeName/}]]' + value,
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.code == 0) {
+                            exist = true;
+                        }
+                    }
+                });
+                if(exist)
+                    return "该类型名重复";
+            }
+        });
+    });
+</script>
+</body>
+</html>

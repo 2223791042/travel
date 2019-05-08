@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="guet.hj.travel.dao.ComplaintMapper" >
+  <resultMap id="BaseResultMap" type="guet.hj.travel.entity.Complaint" >
+    <id column="complaint_id" property="complaintId" jdbcType="BIGINT" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="telephone" property="telephone" jdbcType="VARCHAR" />
+    <result column="problem" property="problem" jdbcType="VARCHAR" />
+    <result column="carry_file" property="carryFile" jdbcType="VARCHAR" />
+    <result column="complaint_time" property="complaintTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    complaint_id, title, username, telephone, problem, carry_file, complaint_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="guet.hj.travel.entity.ComplaintExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from complaint
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from complaint
+    where complaint_id = #{complaintId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from complaint
+    where complaint_id = #{complaintId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="guet.hj.travel.entity.ComplaintExample" >
+    delete from complaint
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="guet.hj.travel.entity.Complaint" >
+    insert into complaint (complaint_id, title, username, 
+      telephone, problem, carry_file, 
+      complaint_time)
+    values (#{complaintId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, 
+      #{telephone,jdbcType=VARCHAR}, #{problem,jdbcType=VARCHAR}, #{carryFile,jdbcType=VARCHAR}, 
+      #{complaintTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="guet.hj.travel.entity.Complaint" >
+    insert into complaint
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="complaintId != null" >
+        complaint_id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="telephone != null" >
+        telephone,
+      </if>
+      <if test="problem != null" >
+        problem,
+      </if>
+      <if test="carryFile != null" >
+        carry_file,
+      </if>
+      <if test="complaintTime != null" >
+        complaint_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="complaintId != null" >
+        #{complaintId,jdbcType=BIGINT},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="problem != null" >
+        #{problem,jdbcType=VARCHAR},
+      </if>
+      <if test="carryFile != null" >
+        #{carryFile,jdbcType=VARCHAR},
+      </if>
+      <if test="complaintTime != null" >
+        #{complaintTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="guet.hj.travel.entity.ComplaintExample" resultType="java.lang.Integer" >
+    select count(*) from complaint
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update complaint
+    <set >
+      <if test="record.complaintId != null" >
+        complaint_id = #{record.complaintId,jdbcType=BIGINT},
+      </if>
+      <if test="record.title != null" >
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.username != null" >
+        username = #{record.username,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telephone != null" >
+        telephone = #{record.telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.problem != null" >
+        problem = #{record.problem,jdbcType=VARCHAR},
+      </if>
+      <if test="record.carryFile != null" >
+        carry_file = #{record.carryFile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.complaintTime != null" >
+        complaint_time = #{record.complaintTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update complaint
+    set complaint_id = #{record.complaintId,jdbcType=BIGINT},
+      title = #{record.title,jdbcType=VARCHAR},
+      username = #{record.username,jdbcType=VARCHAR},
+      telephone = #{record.telephone,jdbcType=VARCHAR},
+      problem = #{record.problem,jdbcType=VARCHAR},
+      carry_file = #{record.carryFile,jdbcType=VARCHAR},
+      complaint_time = #{record.complaintTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="guet.hj.travel.entity.Complaint" >
+    update complaint
+    <set >
+      <if test="title != null" >
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="telephone != null" >
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="problem != null" >
+        problem = #{problem,jdbcType=VARCHAR},
+      </if>
+      <if test="carryFile != null" >
+        carry_file = #{carryFile,jdbcType=VARCHAR},
+      </if>
+      <if test="complaintTime != null" >
+        complaint_time = #{complaintTime,jdbcType=DATE},
+      </if>
+    </set>
+    where complaint_id = #{complaintId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="guet.hj.travel.entity.Complaint" >
+    update complaint
+    set title = #{title,jdbcType=VARCHAR},
+      username = #{username,jdbcType=VARCHAR},
+      telephone = #{telephone,jdbcType=VARCHAR},
+      problem = #{problem,jdbcType=VARCHAR},
+      carry_file = #{carryFile,jdbcType=VARCHAR},
+      complaint_time = #{complaintTime,jdbcType=DATE}
+    where complaint_id = #{complaintId,jdbcType=BIGINT}
+  </update>
+</mapper>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="guet.hj.travel.dao.ResideRecordMapper" >
+  <resultMap id="BaseResultMap" type="guet.hj.travel.entity.ResideRecord" >
+    <id column="reside_id" property="resideId" jdbcType="BIGINT" />
+    <result column="consumer_id" property="consumerId" jdbcType="BIGINT" />
+    <result column="room_id" property="roomId" jdbcType="BIGINT" />
+    <result column="in_time" property="inTime" jdbcType="DATE" />
+    <result column="out_time" property="outTime" jdbcType="DATE" />
+    <result column="reside_days" property="resideDays" jdbcType="INTEGER" />
+    <result column="reside_cost" property="resideCost" jdbcType="DECIMAL" />
+    <result column="order_time" property="orderTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    reside_id, consumer_id, room_id, in_time, out_time, reside_days, reside_cost, order_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="guet.hj.travel.entity.ResideRecordExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from reside_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from reside_record
+    where reside_id = #{resideId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from reside_record
+    where reside_id = #{resideId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="guet.hj.travel.entity.ResideRecordExample" >
+    delete from reside_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="guet.hj.travel.entity.ResideRecord" >
+    insert into reside_record (reside_id, consumer_id, room_id, 
+      in_time, out_time, reside_days, 
+      reside_cost, order_time)
+    values (#{resideId,jdbcType=BIGINT}, #{consumerId,jdbcType=BIGINT}, #{roomId,jdbcType=BIGINT}, 
+      #{inTime,jdbcType=DATE}, #{outTime,jdbcType=DATE}, #{resideDays,jdbcType=INTEGER}, 
+      #{resideCost,jdbcType=DECIMAL}, #{orderTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="guet.hj.travel.entity.ResideRecord" >
+    insert into reside_record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="resideId != null" >
+        reside_id,
+      </if>
+      <if test="consumerId != null" >
+        consumer_id,
+      </if>
+      <if test="roomId != null" >
+        room_id,
+      </if>
+      <if test="inTime != null" >
+        in_time,
+      </if>
+      <if test="outTime != null" >
+        out_time,
+      </if>
+      <if test="resideDays != null" >
+        reside_days,
+      </if>
+      <if test="resideCost != null" >
+        reside_cost,
+      </if>
+      <if test="orderTime != null" >
+        order_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="resideId != null" >
+        #{resideId,jdbcType=BIGINT},
+      </if>
+      <if test="consumerId != null" >
+        #{consumerId,jdbcType=BIGINT},
+      </if>
+      <if test="roomId != null" >
+        #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="inTime != null" >
+        #{inTime,jdbcType=DATE},
+      </if>
+      <if test="outTime != null" >
+        #{outTime,jdbcType=DATE},
+      </if>
+      <if test="resideDays != null" >
+        #{resideDays,jdbcType=INTEGER},
+      </if>
+      <if test="resideCost != null" >
+        #{resideCost,jdbcType=DECIMAL},
+      </if>
+      <if test="orderTime != null" >
+        #{orderTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="guet.hj.travel.entity.ResideRecordExample" resultType="java.lang.Integer" >
+    select count(*) from reside_record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update reside_record
+    <set >
+      <if test="record.resideId != null" >
+        reside_id = #{record.resideId,jdbcType=BIGINT},
+      </if>
+      <if test="record.consumerId != null" >
+        consumer_id = #{record.consumerId,jdbcType=BIGINT},
+      </if>
+      <if test="record.roomId != null" >
+        room_id = #{record.roomId,jdbcType=BIGINT},
+      </if>
+      <if test="record.inTime != null" >
+        in_time = #{record.inTime,jdbcType=DATE},
+      </if>
+      <if test="record.outTime != null" >
+        out_time = #{record.outTime,jdbcType=DATE},
+      </if>
+      <if test="record.resideDays != null" >
+        reside_days = #{record.resideDays,jdbcType=INTEGER},
+      </if>
+      <if test="record.resideCost != null" >
+        reside_cost = #{record.resideCost,jdbcType=DECIMAL},
+      </if>
+      <if test="record.orderTime != null" >
+        order_time = #{record.orderTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update reside_record
+    set reside_id = #{record.resideId,jdbcType=BIGINT},
+      consumer_id = #{record.consumerId,jdbcType=BIGINT},
+      room_id = #{record.roomId,jdbcType=BIGINT},
+      in_time = #{record.inTime,jdbcType=DATE},
+      out_time = #{record.outTime,jdbcType=DATE},
+      reside_days = #{record.resideDays,jdbcType=INTEGER},
+      reside_cost = #{record.resideCost,jdbcType=DECIMAL},
+      order_time = #{record.orderTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="guet.hj.travel.entity.ResideRecord" >
+    update reside_record
+    <set >
+      <if test="consumerId != null" >
+        consumer_id = #{consumerId,jdbcType=BIGINT},
+      </if>
+      <if test="roomId != null" >
+        room_id = #{roomId,jdbcType=BIGINT},
+      </if>
+      <if test="inTime != null" >
+        in_time = #{inTime,jdbcType=DATE},
+      </if>
+      <if test="outTime != null" >
+        out_time = #{outTime,jdbcType=DATE},
+      </if>
+      <if test="resideDays != null" >
+        reside_days = #{resideDays,jdbcType=INTEGER},
+      </if>
+      <if test="resideCost != null" >
+        reside_cost = #{resideCost,jdbcType=DECIMAL},
+      </if>
+      <if test="orderTime != null" >
+        order_time = #{orderTime,jdbcType=DATE},
+      </if>
+    </set>
+    where reside_id = #{resideId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="guet.hj.travel.entity.ResideRecord" >
+    update reside_record
+    set consumer_id = #{consumerId,jdbcType=BIGINT},
+      room_id = #{roomId,jdbcType=BIGINT},
+      in_time = #{inTime,jdbcType=DATE},
+      out_time = #{outTime,jdbcType=DATE},
+      reside_days = #{resideDays,jdbcType=INTEGER},
+      reside_cost = #{resideCost,jdbcType=DECIMAL},
+      order_time = #{orderTime,jdbcType=DATE}
+    where reside_id = #{resideId,jdbcType=BIGINT}
+  </update>
+</mapper>

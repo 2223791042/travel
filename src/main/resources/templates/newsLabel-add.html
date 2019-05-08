@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/layui/css/layui.css}" />
+    <script type="text/javascript" th:src="@{/script/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/layui/layui.js}"></script>
+    <title>新闻标签添加</title>
+    <style>
+        #newsLabelForm {
+            margin-left: 130px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+<form class="layui-form" id="newsLabelForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="labelName">标签名</label>
+        <div class="layui-input-inline">
+            <input type="text" name="labelName" id="labelName" lay-verify="required|checkTypeName" placeholder="请输入" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label" for="labelTime">创建时间</label>
+        <div class="layui-input-inline">
+            <input type="text" name="labelTime" id="labelTime" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block" style="margin-left: 36%;">
+            <button class="layui-btn" lay-submit="" lay-filter="sub">确定</button>
+        </div>
+    </div>
+</form>
+<script>
+    layui.use(['form', 'laydate'], function () {
+        var form = layui.form;
+        var layer = layui.layer;
+        var laydate = layui.laydate;
+        //日期
+        laydate.render({
+            elem: '#labelTime'
+        });
+        //提交表单
+        form.on('submit(sub)', function (data) {
+            $.ajax({
+                type: "POST",
+                url: '[[@{/admin/newsLabel}]]',
+                data: $("#newsLabelForm").serialize(),
+                dataType: "json",
+                success: function (result) {
+                    if (result.code == 0) {
+                        var id = layer.msg('添加成功',{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    } else {
+                        var id = layer.msg(result.msg,{
+                            time:false,
+                            btn:['知道了'],
+                            yes:function () {
+                                layer.close(id);
+                            }
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+        //自定义验证规则
+        form.verify({
+            checkLabelName:function (value) {
+                var exist = false;
+                $.ajax({
+                    async: false,
+                    type: "GET",
+                    url: '[[@{/admin/newsLabel/checkLabelName/}]]' + value,
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.code == 0) {
+                            exist = true;
+                        }
+                    }
+                });
+                if(exist)
+                    return "该标签名重复";
+            }
+        });
+    });
+</script>
+</body>
+</html>

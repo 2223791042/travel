@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="guet.hj.travel.dao.NewsLabelMapper" >
+  <resultMap id="BaseResultMap" type="guet.hj.travel.entity.NewsLabel" >
+    <id column="label_id" property="labelId" jdbcType="INTEGER" />
+    <result column="label_name" property="labelName" jdbcType="VARCHAR" />
+    <result column="label_author" property="labelAuthor" jdbcType="VARCHAR" />
+    <result column="label_time" property="labelTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    label_id, label_name, label_author, label_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="guet.hj.travel.entity.NewsLabelExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from news_label
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from news_label
+    where label_id = #{labelId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from news_label
+    where label_id = #{labelId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="guet.hj.travel.entity.NewsLabelExample" >
+    delete from news_label
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="guet.hj.travel.entity.NewsLabel" >
+    insert into news_label (label_id, label_name, label_author, 
+      label_time)
+    values (#{labelId,jdbcType=INTEGER}, #{labelName,jdbcType=VARCHAR}, #{labelAuthor,jdbcType=VARCHAR}, 
+      #{labelTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="guet.hj.travel.entity.NewsLabel" >
+    insert into news_label
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="labelId != null" >
+        label_id,
+      </if>
+      <if test="labelName != null" >
+        label_name,
+      </if>
+      <if test="labelAuthor != null" >
+        label_author,
+      </if>
+      <if test="labelTime != null" >
+        label_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="labelId != null" >
+        #{labelId,jdbcType=INTEGER},
+      </if>
+      <if test="labelName != null" >
+        #{labelName,jdbcType=VARCHAR},
+      </if>
+      <if test="labelAuthor != null" >
+        #{labelAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="labelTime != null" >
+        #{labelTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="guet.hj.travel.entity.NewsLabelExample" resultType="java.lang.Integer" >
+    select count(*) from news_label
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update news_label
+    <set >
+      <if test="record.labelId != null" >
+        label_id = #{record.labelId,jdbcType=INTEGER},
+      </if>
+      <if test="record.labelName != null" >
+        label_name = #{record.labelName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.labelAuthor != null" >
+        label_author = #{record.labelAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="record.labelTime != null" >
+        label_time = #{record.labelTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update news_label
+    set label_id = #{record.labelId,jdbcType=INTEGER},
+      label_name = #{record.labelName,jdbcType=VARCHAR},
+      label_author = #{record.labelAuthor,jdbcType=VARCHAR},
+      label_time = #{record.labelTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="guet.hj.travel.entity.NewsLabel" >
+    update news_label
+    <set >
+      <if test="labelName != null" >
+        label_name = #{labelName,jdbcType=VARCHAR},
+      </if>
+      <if test="labelAuthor != null" >
+        label_author = #{labelAuthor,jdbcType=VARCHAR},
+      </if>
+      <if test="labelTime != null" >
+        label_time = #{labelTime,jdbcType=DATE},
+      </if>
+    </set>
+    where label_id = #{labelId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="guet.hj.travel.entity.NewsLabel" >
+    update news_label
+    set label_name = #{labelName,jdbcType=VARCHAR},
+      label_author = #{labelAuthor,jdbcType=VARCHAR},
+      label_time = #{labelTime,jdbcType=DATE}
+    where label_id = #{labelId,jdbcType=INTEGER}
+  </update>
+</mapper>

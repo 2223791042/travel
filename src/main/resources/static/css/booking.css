@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+			body,
+			p,
+			a,
+			input {
+				margin: 0;
+				padding: 0;
+				font-size: 12px;
+				
+			}
+			
+			.container {
+				padding: 5px;
+			}
+			
+			.main {
+				
+				padding: 10px;
+				
+			}
+			
+			.main .cart-container table {
+				width: 100%;
+			}
+			
+			.main .cart-container table tr {
+				text-align: center;
+				background-color: white;
+				
+			}
+
+			.main .cart-container table tr:hover {
+				/*background: rgba(128, 128, 128, 0.5);*/
+				
+			}
+			
+			.main .cart-container table .table-header {
+				height: 30px;
+				background: #d9d9d9;
+				font-size: 1.2em;
+			}
+			
+			.main .cart-container table .table-header td:first-child {
+				border-left: solid 4px red;
+				box-sizing: border-box;
+			}
+			
+			.main .cart-container table tr td:nth-child(1),
+			.main .cart-container table tr td:nth-child(2) {
+				text-align: left;padding-left: 5px;
+				
+			}
+			
+			.main .cart-container table tr td:nth-child(2) {
+				padding-left: 20px;
+			}
+			
+			.main .cart-container table tr td:nth-child(3) {
+				width: 12%;
+			}
+			
+			.main .cart-container table tr td:nth-child(4) {
+				width: 12%;
+			}
+			
+			.main .cart-container table tr td:nth-child(5) {
+				width: 12%;
+			}
+			
+			.main .cart-container table tr td:last-child {
+				width: 10%;
+			}
+			.cart-container input{
+				-webkit-appearance: checkbox !important;display: inline-block;
+			}
+			.cart-container h3{
+				
+				margin-bottom: 40px;color: #666;padding: 0;
+			}
+			.cart-good {
+				
+			}
+			
+			.cart-good img {
+				
+				position: relative;top: 0;display: inline-block;
+
+			}
+			
+			.cart-good td p {
+				margin: 10px 0px;line-height: 30px;color: #666;
+			}
+			/*加、减按钮*/
+			.cart-good td {
+				vertical-align: middle;
+			}
+			.cart-good td input[type='button'] {
+				width: 20px;
+				height: 20px;
+				background: #00f300;
+				outline: none;
+				border: none;
+			}
+			
+			.cart-good td input[type='button']:disabled {
+				background: grey;
+			}
+			
+			.cart-good td input[type='button']:first-child {
+				margin-right: -4px;
+			}
+			
+			.cart-good td input[type='button']:last-child {
+				margin-left: -4px;
+			}
+			
+			.cart-good td input[type='text'] {
+				width: 30px;
+				height: 20px;
+				outline: none;
+				border: none;
+				text-align: center;vertical-align: bottom;
+			}
+			
+			.table-footer {
+				
+				justify-content: space-between;
+				line-height: 40px;
+			}
+			
+			.table-footer div {
+				font-size: 1.2em;
+			}
+			
+			.table-footer div button {
+				background: red;
+				width: 120px;
+				height: 40px;
+				color: white;
+			}
+

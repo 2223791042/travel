@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="guet.hj.travel.dao.HotelMapper" >
+  <resultMap id="BaseResultMap" type="guet.hj.travel.entity.Hotel" >
+    <id column="hotel_id" property="hotelId" jdbcType="BIGINT" />
+    <result column="hotel_name" property="hotelName" jdbcType="VARCHAR" />
+    <result column="hotel_summary" property="hotelSummary" jdbcType="VARCHAR" />
+    <result column="hotel_icon" property="hotelIcon" jdbcType="VARCHAR" />
+    <result column="hotel_image" property="hotelImage" jdbcType="VARCHAR" />
+    <result column="hotel_addr" property="hotelAddr" jdbcType="VARCHAR" />
+    <result column="hotel_price" property="hotelPrice" jdbcType="VARCHAR" />
+    <result column="hotel_scale" property="hotelScale" jdbcType="VARCHAR" />
+    <result column="hotel_room_type" property="hotelRoomType" jdbcType="VARCHAR" />
+    <result column="hotel_facilities" property="hotelFacilities" jdbcType="VARCHAR" />
+    <result column="hotel_desc" property="hotelDesc" jdbcType="VARCHAR" />
+    <result column="hotel_type_id" property="hotelTypeId" jdbcType="INTEGER" />
+    <result column="hotel_order" property="hotelOrder" jdbcType="INTEGER" />
+    <result column="hotel_status" property="hotelStatus" jdbcType="VARCHAR" />
+    <result column="hotel_release" property="hotelRelease" jdbcType="VARCHAR" />
+    <result column="hotel_release_time" property="hotelReleaseTime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    hotel_id, hotel_name, hotel_summary, hotel_icon, hotel_image, hotel_addr, hotel_price, 
+    hotel_scale, hotel_room_type, hotel_facilities, hotel_desc, hotel_type_id, hotel_order, 
+    hotel_status, hotel_release, hotel_release_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="guet.hj.travel.entity.HotelExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from hotel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from hotel
+    where hotel_id = #{hotelId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from hotel
+    where hotel_id = #{hotelId,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="guet.hj.travel.entity.HotelExample" >
+    delete from hotel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="guet.hj.travel.entity.Hotel" >
+    insert into hotel (hotel_id, hotel_name, hotel_summary, 
+      hotel_icon, hotel_image, hotel_addr, 
+      hotel_price, hotel_scale, hotel_room_type, 
+      hotel_facilities, hotel_desc, hotel_type_id, 
+      hotel_order, hotel_status, hotel_release, 
+      hotel_release_time)
+    values (#{hotelId,jdbcType=BIGINT}, #{hotelName,jdbcType=VARCHAR}, #{hotelSummary,jdbcType=VARCHAR}, 
+      #{hotelIcon,jdbcType=VARCHAR}, #{hotelImage,jdbcType=VARCHAR}, #{hotelAddr,jdbcType=VARCHAR}, 
+      #{hotelPrice,jdbcType=VARCHAR}, #{hotelScale,jdbcType=VARCHAR}, #{hotelRoomType,jdbcType=VARCHAR}, 
+      #{hotelFacilities,jdbcType=VARCHAR}, #{hotelDesc,jdbcType=VARCHAR}, #{hotelTypeId,jdbcType=INTEGER}, 
+      #{hotelOrder,jdbcType=INTEGER}, #{hotelStatus,jdbcType=VARCHAR}, #{hotelRelease,jdbcType=VARCHAR}, 
+      #{hotelReleaseTime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="guet.hj.travel.entity.Hotel" >
+    insert into hotel
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="hotelId != null" >
+        hotel_id,
+      </if>
+      <if test="hotelName != null" >
+        hotel_name,
+      </if>
+      <if test="hotelSummary != null" >
+        hotel_summary,
+      </if>
+      <if test="hotelIcon != null" >
+        hotel_icon,
+      </if>
+      <if test="hotelImage != null" >
+        hotel_image,
+      </if>
+      <if test="hotelAddr != null" >
+        hotel_addr,
+      </if>
+      <if test="hotelPrice != null" >
+        hotel_price,
+      </if>
+      <if test="hotelScale != null" >
+        hotel_scale,
+      </if>
+      <if test="hotelRoomType != null" >
+        hotel_room_type,
+      </if>
+      <if test="hotelFacilities != null" >
+        hotel_facilities,
+      </if>
+      <if test="hotelDesc != null" >
+        hotel_desc,
+      </if>
+      <if test="hotelTypeId != null" >
+        hotel_type_id,
+      </if>
+      <if test="hotelOrder != null" >
+        hotel_order,
+      </if>
+      <if test="hotelStatus != null" >
+        hotel_status,
+      </if>
+      <if test="hotelRelease != null" >
+        hotel_release,
+      </if>
+      <if test="hotelReleaseTime != null" >
+        hotel_release_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="hotelId != null" >
+        #{hotelId,jdbcType=BIGINT},
+      </if>
+      <if test="hotelName != null" >
+        #{hotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelSummary != null" >
+        #{hotelSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelIcon != null" >
+        #{hotelIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelImage != null" >
+        #{hotelImage,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelAddr != null" >
+        #{hotelAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelPrice != null" >
+        #{hotelPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelScale != null" >
+        #{hotelScale,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelRoomType != null" >
+        #{hotelRoomType,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelFacilities != null" >
+        #{hotelFacilities,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelDesc != null" >
+        #{hotelDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelTypeId != null" >
+        #{hotelTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelOrder != null" >
+        #{hotelOrder,jdbcType=INTEGER},
+      </if>
+      <if test="hotelStatus != null" >
+        #{hotelStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelRelease != null" >
+        #{hotelRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelReleaseTime != null" >
+        #{hotelReleaseTime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="guet.hj.travel.entity.HotelExample" resultType="java.lang.Integer" >
+    select count(*) from hotel
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update hotel
+    <set >
+      <if test="record.hotelId != null" >
+        hotel_id = #{record.hotelId,jdbcType=BIGINT},
+      </if>
+      <if test="record.hotelName != null" >
+        hotel_name = #{record.hotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelSummary != null" >
+        hotel_summary = #{record.hotelSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelIcon != null" >
+        hotel_icon = #{record.hotelIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelImage != null" >
+        hotel_image = #{record.hotelImage,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelAddr != null" >
+        hotel_addr = #{record.hotelAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelPrice != null" >
+        hotel_price = #{record.hotelPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelScale != null" >
+        hotel_scale = #{record.hotelScale,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelRoomType != null" >
+        hotel_room_type = #{record.hotelRoomType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelFacilities != null" >
+        hotel_facilities = #{record.hotelFacilities,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelDesc != null" >
+        hotel_desc = #{record.hotelDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelTypeId != null" >
+        hotel_type_id = #{record.hotelTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="record.hotelOrder != null" >
+        hotel_order = #{record.hotelOrder,jdbcType=INTEGER},
+      </if>
+      <if test="record.hotelStatus != null" >
+        hotel_status = #{record.hotelStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelRelease != null" >
+        hotel_release = #{record.hotelRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hotelReleaseTime != null" >
+        hotel_release_time = #{record.hotelReleaseTime,jdbcType=DATE},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update hotel
+    set hotel_id = #{record.hotelId,jdbcType=BIGINT},
+      hotel_name = #{record.hotelName,jdbcType=VARCHAR},
+      hotel_summary = #{record.hotelSummary,jdbcType=VARCHAR},
+      hotel_icon = #{record.hotelIcon,jdbcType=VARCHAR},
+      hotel_image = #{record.hotelImage,jdbcType=VARCHAR},
+      hotel_addr = #{record.hotelAddr,jdbcType=VARCHAR},
+      hotel_price = #{record.hotelPrice,jdbcType=VARCHAR},
+      hotel_scale = #{record.hotelScale,jdbcType=VARCHAR},
+      hotel_room_type = #{record.hotelRoomType,jdbcType=VARCHAR},
+      hotel_facilities = #{record.hotelFacilities,jdbcType=VARCHAR},
+      hotel_desc = #{record.hotelDesc,jdbcType=VARCHAR},
+      hotel_type_id = #{record.hotelTypeId,jdbcType=INTEGER},
+      hotel_order = #{record.hotelOrder,jdbcType=INTEGER},
+      hotel_status = #{record.hotelStatus,jdbcType=VARCHAR},
+      hotel_release = #{record.hotelRelease,jdbcType=VARCHAR},
+      hotel_release_time = #{record.hotelReleaseTime,jdbcType=DATE}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="guet.hj.travel.entity.Hotel" >
+    update hotel
+    <set >
+      <if test="hotelName != null" >
+        hotel_name = #{hotelName,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelSummary != null" >
+        hotel_summary = #{hotelSummary,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelIcon != null" >
+        hotel_icon = #{hotelIcon,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelImage != null" >
+        hotel_image = #{hotelImage,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelAddr != null" >
+        hotel_addr = #{hotelAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelPrice != null" >
+        hotel_price = #{hotelPrice,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelScale != null" >
+        hotel_scale = #{hotelScale,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelRoomType != null" >
+        hotel_room_type = #{hotelRoomType,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelFacilities != null" >
+        hotel_facilities = #{hotelFacilities,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelDesc != null" >
+        hotel_desc = #{hotelDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelTypeId != null" >
+        hotel_type_id = #{hotelTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="hotelOrder != null" >
+        hotel_order = #{hotelOrder,jdbcType=INTEGER},
+      </if>
+      <if test="hotelStatus != null" >
+        hotel_status = #{hotelStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelRelease != null" >
+        hotel_release = #{hotelRelease,jdbcType=VARCHAR},
+      </if>
+      <if test="hotelReleaseTime != null" >
+        hotel_release_time = #{hotelReleaseTime,jdbcType=DATE},
+      </if>
+    </set>
+    where hotel_id = #{hotelId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="guet.hj.travel.entity.Hotel" >
+    update hotel
+    set hotel_name = #{hotelName,jdbcType=VARCHAR},
+      hotel_summary = #{hotelSummary,jdbcType=VARCHAR},
+      hotel_icon = #{hotelIcon,jdbcType=VARCHAR},
+      hotel_image = #{hotelImage,jdbcType=VARCHAR},
+      hotel_addr = #{hotelAddr,jdbcType=VARCHAR},
+      hotel_price = #{hotelPrice,jdbcType=VARCHAR},
+      hotel_scale = #{hotelScale,jdbcType=VARCHAR},
+      hotel_room_type = #{hotelRoomType,jdbcType=VARCHAR},
+      hotel_facilities = #{hotelFacilities,jdbcType=VARCHAR},
+      hotel_desc = #{hotelDesc,jdbcType=VARCHAR},
+      hotel_type_id = #{hotelTypeId,jdbcType=INTEGER},
+      hotel_order = #{hotelOrder,jdbcType=INTEGER},
+      hotel_status = #{hotelStatus,jdbcType=VARCHAR},
+      hotel_release = #{hotelRelease,jdbcType=VARCHAR},
+      hotel_release_time = #{hotelReleaseTime,jdbcType=DATE}
+    where hotel_id = #{hotelId,jdbcType=BIGINT}
+  </update>
+</mapper>
