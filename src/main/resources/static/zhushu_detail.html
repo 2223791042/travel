@@ -75,9 +75,6 @@
 									text-decoration: none;
 								}
 								
-								.logincont a:hover {
-									color: ;
-								}
 							</style>
 
 							<p id="login">
@@ -378,7 +375,7 @@
 		<div class="wrap-full bg-gray">
 			<div class="wrap">
 				<h2 class="inn-more">更多精品酒店</h2>
-				<div id="" >
+				<div>
 					<ul class="lrslist cl">
 					<li>
 						<a href="zhushu_detail.html">
@@ -650,7 +647,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="phone-mask">
+		<div id="phone-mask2">
 			<div>
 				<img src="images/导航菜单@2x.png">
 			</div>
@@ -729,7 +726,31 @@
 			<a href="http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=87154&configID=152224&jid=3440628096&enterurl=http%3A%2F%2Fwww%2Eewuzhen%2Ecom%2Fwuzhen%2Findex%2Edo&timestamp=1252214612484s"></a>
 			<a href="javascript:;"><img src="images/floatbtn2.png" onclick="returnTop()" style="display:none;" /></a>
 		</div>
-
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/project-path.js"></script>
+		<script>
+            function GetQueryString(name)
+            {
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r != null)
+                    return  unescape(r[2]);
+                return null;
+            }
+			$(function () {
+				var hotelId = GetQueryString("hotelId");
+				//根据id获取酒店详情
+				$.ajax({
+					async: false,
+					url: path + "/hotel/"+hotelId,
+					type: "GET",
+					dataType: "JSON",
+					success: function(result){
+						console.log(result);
+					}
+				});
+            });
+		</script>
 	</body>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>

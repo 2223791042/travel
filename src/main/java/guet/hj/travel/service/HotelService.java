@@ -1,7 +1,9 @@
 package guet.hj.travel.service;
 
+import guet.hj.travel.VO.HotelVO;
 import guet.hj.travel.entity.Hotel;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -21,4 +23,6 @@ public interface HotelService {
     void delBatchHotel(String id_str);
 
     Hotel getHotel(String hotelName);
+
+    List<HotelVO> getHotelVOList();
 }

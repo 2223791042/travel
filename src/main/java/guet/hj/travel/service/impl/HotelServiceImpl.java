@@ -1,6 +1,7 @@
 package guet.hj.travel.service.impl;
 
 import com.github.pagehelper.PageInfo;
+import guet.hj.travel.VO.HotelVO;
 import guet.hj.travel.dao.HotelMapper;
 import guet.hj.travel.dao.HotelTypeMapper;
 import guet.hj.travel.dto.HotelDTO;
@@ -115,5 +116,26 @@ public class HotelServiceImpl implements HotelService {
             return hotelList.get(0);
         }
         return null;
+    }
+
+    @Override
+    public List<HotelVO> getHotelVOList() {
+        ArrayList<HotelVO> hotelVOList = new ArrayList<>();
+        List<HotelType> hotelTypeList = hotelTypeMapper.selectByExample(null);
+        for(HotelType hotelType : hotelTypeList){
+            HotelExample example = new HotelExample();
+            example.setOrderByClause("hotel_order asc");
+            HotelExample.Criteria criteria = example.createCriteria();
+            criteria.andHotelStatusEqualTo("1");
+            criteria.andHotelTypeIdEqualTo(hotelType.getTypeId());
+            List<Hotel> hotelList = hotelMapper.selectByExample(example);
+            if (hotelList.size() != 0){
+                HotelVO hotelVO = new HotelVO();
+                hotelVO.setHotelType(hotelType.getTypeName());
+                hotelVO.setHotelList(hotelList);
+                hotelVOList.add(hotelVO);
+            }
+        }
+        return hotelVOList;
     }
 }
