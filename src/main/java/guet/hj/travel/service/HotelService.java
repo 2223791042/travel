@@ -25,4 +25,5 @@ public interface HotelService {
     Hotel getHotel(String hotelName);
 
     List<HotelVO> getHotelVOList();
+
 }

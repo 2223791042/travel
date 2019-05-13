@@ -41,7 +41,7 @@
         <!-- 指定Table的生成策略 -->
         <!--<table tableName="hotel" domainObjectName="Hotel"></table>-->
         <!--<table tableName="room" domainObjectName="Room"></table>-->
-        <table tableName="reside_record" domainObjectName="ResideRecord"></table>
+        <table tableName="front_user" domainObjectName="FrontUser"></table>
         <!--<table tableName="hotel_type" domainObjectName="HotelType"></table>-->
         <!--<table tableName="room" domainObjectName="Room"></table>-->
 

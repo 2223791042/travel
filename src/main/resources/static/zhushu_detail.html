@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>昭明书舍|住宿详情-黄姚古镇旅游官方网站</title>
+		<title>住宿详情-黄姚古镇旅游官方网站</title>
 		<meta charset="utf-8">
 		<meta name="renderer" content="webkit" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -140,7 +140,7 @@
 							<img src="images/menu-icon.png">
 							<ul class="dropdown-menu">
 								<li>
-									<a href="vacation.html">住宿</a>
+									<a href="hotelList.html">住宿</a>
 								</li>
 
 								<li>
@@ -306,49 +306,35 @@
 		<div class="wrap">
 			<div class="inn">
 				<ul class="cl inn-content">
-					<li class="inn-logo">
-						<img src="uploads/goods/2018042413260837136.jpg" width="180px" height="180px" alt="" title="">
+					<li class="inn-logo" id="hotelIcon">
 					</li>
-					<li class="inn-info">
-						<h2>昭明书舍</h2>
-						<span></span>
-						<p>
-							酒店装修风格取材于古镇昭明书院古迹，融入江南古镇文脉，打造文化休闲、书式生活空间。书舍厅堂弥漫古色古香的书卷气息。
-						</p>
+					<li class="inn-info" id="hotelIntroduce">
 					</li>
 					<li class="inn-money">
 						<span><img src="images/地址.png">地址</span>
-						<p>西栅景区昭明书院东</p>
+						<p id="hotelAddr"></p>
 						<span class="money"><img src="images/jiewei.png">价位</span>
-						<p>1280元 /间 起</p>
+						<p id="hotelPrice"></p>
 					</li>
 				</ul>
-				<div class="clear"></div>
-				<div style="margin-top: 10px;">
-					<img src="uploads/goods/2018052115162631168_2.jpg" />
-				</div>
+				<div style="margin-top: 10px;" id="hotelDesc">
 
-				<p>
-					<p>传承江南古镇文脉，打造文化休闲书式生活空间。昭明书舍酒店装修风格灵感源于古镇昭明书院古迹。</p>
-					<p>拥有66间特色双卧室标间和1间家庭套间。二楼设大、小型会议室各1间，可容纳300人，天顶用古籍灯片装饰，浑朴古雅，典雅大气，服务设施完善，是商务会议、休闲度假的理想之所。酒店拥有明徽、明堂两个特色餐厅可容纳300多人用餐，设有2个特色包厢，均可提供徽州传统及江南风味特色美食。</p>
-				</p>
-				<hr>
+				</div>
 				<ul class="inn-detail cl">
 					<li>
 						<span><img src="images/guimo.png">规模</span>
-						<p>拥有66间特色双卧室标间和1间家庭套间。二楼设大、小型会议室各1间，可容纳300人。</p>
+						<p id="hotelScale"></p>
 					</li>
 					<li>
 						<span><img src="images/房型.png">房型</span>
-						<p>拥有66间特色双卧室标间和1间家庭套间。</p>
+						<p id="hotelRoomType"></p>
 					</li>
 					<li>
 						<span><img src="images/dizhi.png">设施</span>
 						<p>
 							<p><span style="white-space: normal;"></span></p>
-							<p>外部配套设施：会议室、餐厅；</p>
-							<p>内部配套设施：独立卫浴、中央空调、卫浴用品、保管箱、电话、磁卡门锁、直饮水、迷你吧、卫星电视、Wifi网络。
-								< </p>
+							<p id="hotelFacilities"></p>
+						</p>
 					</li>
 				</ul>
 				<div class="clear"></div>
@@ -374,48 +360,10 @@
 
 		<div class="wrap-full bg-gray">
 			<div class="wrap">
-				<h2 class="inn-more">更多精品酒店</h2>
+				<h2 class="inn-more" id="moreIntroduce"></h2>
 				<div>
-					<ul class="lrslist cl">
-					<li>
-						<a href="zhushu_detail.html">
-							<img src="uploads/goods/2018033015383154835.jpg" alt="宜园精品酒店" title="宜园精品酒店">
-							<h4>宜园精品酒店</h4>
-							<div class="views">
-								<span>
-								了解更多
-								<span></span>
-								</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/web/vacation/details?id=5D19B84F9250027939FC8694C174CCE4">
-							<img src="uploads/goods/2017102517302129836.jpg" alt="" title="">
-							<h4>锦堂行馆</h4>
-							<div class="views">
-								<span>
-								了解更多
-								<span></span>
-								</span>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="/web/vacation/details?id=6A63701434EE2ACB14CBA9AA7908BA29">
-							<img src="uploads/goods/2017102517410161201.jpg" alt="" title="">
-							<h4>望津里精品酒店</h4>
-							<div class="views">
-								<span>
-								了解更多
-								<span></span>
-								</span>
-							</div>
-						</a>
-					</li>
-				</ul>				
+					<ul class="lrslist cl" id="hotelOthers"></ul>
 				</div>
-
 			</div>
 		</div>
 
@@ -533,7 +481,7 @@
 							<img src="images/arrow-bottom-1.png">
 							<ul>
 								<li>
-									<a href="vacation.html">住宿</a>
+									<a href="hotelList.html">住宿</a>
 								</li>
 
 								<li>
@@ -739,6 +687,7 @@
             }
 			$(function () {
 				var hotelId = GetQueryString("hotelId");
+				var typeId = null;
 				//根据id获取酒店详情
 				$.ajax({
 					async: false,
@@ -746,9 +695,48 @@
 					type: "GET",
 					dataType: "JSON",
 					success: function(result){
-						console.log(result);
+					    var hotel = result.data.hotel;
+					    var hotelType = result.data.hotelType;
+						$("#hotelIcon").empty();
+						$("#hotelIcon").append("<img src='"+hotel.hotelIcon+"' width='180px' height='180px' alt='' title=''>");
+						$("#hotelIntroduce").empty();
+						$("#hotelIntroduce").append("<h2>"+hotel.hotelName+"</h2><span></span><p>"+hotel.hotelSummary+"</p>");
+						$("#hotelAddr").empty();
+						$("#hotelAddr").append(hotel.hotelAddr);
+						$("#hotelPrice").empty();
+						$("#hotelPrice").append(hotel.hotelPrice+ "/间 起");
+						$("#hotelInfo").empty();
+						$("#hotelDesc").append(hotel.hotelDesc);
+						$("#hotelScale").empty();
+						$("#hotelScale").append(hotel.hotelScale);
+						$("#hotelRoomType").empty();
+						$("#hotelRoomType").append(hotel.hotelRoomType);
+						$("#hotelFacilities").empty();
+						$("#hotelFacilities").append(hotel.hotelFacilities);
+						$("#moreIntroduce").empty();
+						$("#moreIntroduce").append("更多"+hotelType.typeName);
+                        typeId = hotelType.typeId;
 					}
 				});
+                $.ajax({
+                    async: false,
+                    url: path + "/hotel/others/" + typeId,
+                    type: "GET",
+                    dataType: "JSON",
+                    success: function (result) {
+                        $("#hotelOthers").empty();
+                        var content = "";
+						$.each(result.data, function (index, element) {
+							if (element.hotelId != hotelId){
+								content += "<li><a href='zhushu_detail.html?hotelId="+element.hotelId+"'>";
+								content += "<img src='"+element.hotelImage+"' alt='"+element.hotelName+"' title='"+element.hotelName+"'>";
+								content += "<h4>"+element.hotelName+"</h4>";
+								content += "<div class='views'><span>了解更多<span></span></span></div></a></li>";
+							}
+                        });
+						$("#hotelOthers").append(content);
+                    }
+                });
             });
 		</script>
 	</body>
