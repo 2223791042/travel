@@ -51,6 +51,7 @@ public class FrontController {
             try{
                 frontUser.setUserRegisterTime(new Date());
                 frontUserService.saveFrontUser(frontUser);
+                return ResultVOUtil.success();
             }catch (Exception e){
                 return ResultVOUtil.error(ResultEnum.FAIL.getCode(),"注册失败");
             }

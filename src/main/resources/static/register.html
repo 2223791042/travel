@@ -85,9 +85,6 @@
 									text-decoration: none;
 								}
 								
-								.logincont a:hover {
-									color: ;
-								}
 							</style>
 
 							<p id="login">
@@ -290,50 +287,39 @@
 							<input  type="hidden" name="returnUrl" value="http://www.ewuzhen.com/index.htm">
 							<div class="message-list show">
 								<div class="message account">
-									<span>账号 :</span><input type="text" placeholder="手机号/用户名/邮箱" name="loginName" />
+									<span>账号 :</span><input type="text" placeholder="手机号" name="userPhone" />
 									<p class="err-message">您输入的帐号已存在</p>
 								</div>
 								<div class="message account">
-									<span>邮箱地址 :</span><input type="text" placeholder="邮箱" />
+									<span>邮箱地址 :</span><input type="text" name="userEmail" placeholder="邮箱" />
 									
 								</div>								
 								<div class="message password">
-									<span>登录密码 :</span><input type="password" placeholder="密码(6-18位字母加数字)" name="loginPass" validate="{required:true}" />
+									<span>登录密码 :</span><input type="password" placeholder="密码(6-18位字母加数字)" name="userPassword" validate="{required:true}" />
 
 								</div>
 								<div class="message password">
-									<span>确认密码 :</span><input type="password" placeholder="密码(6-18位字母加数字)" name="loginPass" validate="{required:true}" />
+									<span>确认密码 :</span><input type="password" placeholder="密码(6-18位字母加数字)" name="rePassword" validate="{required:true}" />
 
 								</div>							
 								<div class="message account">
 									<span style="position: relative;top:12px;">验证码:</span>
-									<input class="" type="text" id="code_input" value="" placeholder="请输入验证码"  style="width: 28%;position: relative;top: -20px;" />
-									<div id="v_container" style="width: 200px;height: 50px;display: inline-block;"></div>
-									
+									<input class="" type="text" name="verifyCode" id="code_input" value="" placeholder="请输入验证码"  style="width: 28%;position: relative;" />
+									<img id="verifyCode" style="width: 200px;height: 48px;display: inline-block;"/>
 								</div>
 								<div class="btn">
-									<a class="login-btn" href="javascript:void(0);" onclick="submitForm1()">登录</a>
+									<a class="login-btn" href="javascript:void(0);" onclick="register()">注册</a>
 									<div class="other-opra">
-										
 										<a class="pull-right" href="login.html">已有账号，直接登录</a>
 									</div>
-
 								</div>
 							</div>
 						</form>
-
-
 					</div>
 				</div>
 			</div>
 			<!-- login-box E -->
 		</div>
-		<!--登录验证码-->
-		<script src="js/gVerify.js"></script>
-		<script>
-			var verifyCode = new GVerify("v_container");
-	
-		</script>		
 		<!--尾部导航-->
 		<div class="footer">
 			<div class="wrap">
@@ -557,7 +543,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="phone-mask">
+		<div id="phone-mask1">
 			<div>
 				<img src="images/导航菜单@2x.png">
 			</div>
@@ -637,6 +623,56 @@
 			<a href="javascript:;"><img src="images/floatbtn2.png" onclick="returnTop()" style="display:none;" /></a>
 		</div>
 
+		<script src="js/project-path.js"></script>
+		<script>
+			$(function () {
+				$("#verifyCode").attr("src", path+'/getVerifyCode?' + Math.floor(Math.random() * 100));
+			});
+			$("#verifyCode").click(function () {
+                $("#verifyCode").attr("src", path+'/getVerifyCode?' + Math.floor(Math.random() * 100));
+            });
+			function register() {
+				if ($("input[name='userPhone']").val() == null ||  $.trim($("input[name='userPhone']").val()) == ""){
+				    alert("账号不能为空");
+                    return;
+				}
+                if ($("input[name='userEmail']").val() == null ||  $.trim($("input[name='userEmail']").val()) == ""){
+                    alert("邮箱不能为空");
+                    return;
+                }
+                if ($("input[name='userPassword']").val() == null ||  $.trim($("input[name='userPassword']").val()) == ""){
+                    alert("登录密码不能为空");
+                    return;
+                }
+                if ($("input[name='rePassword']").val() != $("input[name='userPassword']").val()) {
+                    alert("确认密码必须和登录密码相同");
+                    return;
+				}
+                if ($("input[name='verifyCode']").val() == null ||  $.trim($("input[name='verifyCode']").val()) == ""){
+                    alert("验证码不能为空");
+                    return;
+                }
+				$.ajax({
+					async: false,
+					url: path + '/front/register',
+					type: 'POST',
+					data: {
+                        userPhone: $("input[name='userPhone']").val(),
+                        userEmail: $("input[name='userEmail']").val(),
+                        userPassword: $("input[name='userPassword']").val(),
+						verifyCode: $("input[name='verifyCode']").val()
+					},
+					dataType: "JSON",
+					success: function (result) {
+						if (result.code == 1){
+						    alert(result.msg);
+						} else{
+						    alert("注册成功!");
+						}
+                    }
+				});
+            }
+		</script>
 	</body>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/phone.js"></script>
