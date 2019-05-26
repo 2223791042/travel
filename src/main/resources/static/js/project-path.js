@@ -1,1 +1,1 @@
-var path = "http://localhost:8080/travel";
+var path = "http://domla.xyz:8080/travel";

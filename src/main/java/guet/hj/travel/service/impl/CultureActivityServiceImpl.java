@@ -50,16 +50,19 @@ public class CultureActivityServiceImpl implements CultureActivityService {
         CultureActivity cultureActivity = cultureActivityMapper.selectByPrimaryKey(activityId);
         CultureActivityExample example = new CultureActivityExample();
         CultureActivityExample.Criteria criteria = example.createCriteria();
-        criteria.andActivityTimeGreaterThanOrEqualTo(cultureActivity.getActivityTime());
+        criteria.andActivityTimeLessThanOrEqualTo(cultureActivity.getActivityTime());
         List<CultureActivity> cultureActivityList = cultureActivityMapper.selectByExample(example);
         ArrayList<CultureActivity> cultureActivities = new ArrayList<>();
         if (cultureActivityList.size() == 0)
             return null;
-        for(int i = 0 ; i < 3; i ++){
-            if (cultureActivityList.size() > i){
-                cultureActivities.add(cultureActivityList.get(0));
+        int count = 0;
+        for(int i =0 ; i < 4; i ++)
+            if (cultureActivityList.size() > i && !cultureActivityList.get(i).getActivityId().equals(activityId)){
+                count ++;
+                cultureActivities.add(cultureActivityList.get(i));
+                if (count == 3)
+                    break;
             }
-        }
         return cultureActivities;
     }
 

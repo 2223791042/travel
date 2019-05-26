@@ -13,6 +13,9 @@
 		<link rel="stylesheet" type="text/css" href="css/css.css">
 		<link rel="stylesheet" type="text/css" href="css/media.css">
 		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script src="layui/layui.js"></script>
+
 
 
 	</head>
@@ -74,10 +77,6 @@
 								.logincont a {
 									color: white;
 									text-decoration: none;
-								}
-								
-								.logincont a:hover {
-									color: ;
 								}
 							</style>
 
@@ -322,12 +321,12 @@
 		</div>
 
 		<div class="wrap">
-			<h1 class="page-detail-title wenhua-title">戏剧百川齐汇古镇，名团新锐实验多元 ——2018年第六届古镇戏剧节即将开幕</h1>
+			<h1 class="page-detail-title wenhua-title" id="activityTitle"></h1>
 			<div class="detail-list">
 				<ul class="cl">
 					<li class="lDetail">
 						<div class="detail-info">
-							<span>日期：<span>2018-12-5</span></span>
+							<span>日期：<span id="activityTime"></span></span>
 							<p class="bdsharebuttonbox">
 								分享
 								<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
@@ -359,55 +358,17 @@
 								with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 							</script>
 						</div>
-
-						<p style="white-space: normal;">2018年古镇戏剧节将于10月18日至28日期间在古镇盛大开幕！今天下午，陈向宏、黄磊、赖声川、孟京辉四位古镇戏剧节发起人公布了2018年古镇戏剧节万众瞩目的全部特邀剧目。</p>
-						<p style="white-space: normal;"><img src="http://wuzhen.hanguosoft.com/ueditor/php/upload/image/20180730/1532955244710954.jpg" title="1532955244710954.jpg" _src="/ueditor/php/upload/image/20180730/1532955244710954.jpg" alt="2_副本.jpg" /></p>
-						<p style="white-space: normal;">古镇戏剧节凭借当代前沿的国际戏剧演出，锐意创新的青年竞演，多元丰富的戏剧活动，古托邦式的创作环境，已经迅速成长为亚洲最具国际影响力的戏剧盛会。</p>
-						<p style="white-space: normal;"><img src="http://wuzhen.hanguosoft.com/ueditor/php/upload/image/20180730/1532955402649850.jpg" title="1532955402649850.jpg" _src="/ueditor/php/upload/image/20180730/1532955402649850.jpg" alt="3_副本.jpg" /></p>
-
-						<p style="white-space: normal;"><strong>购票方式：</strong></p>
-						<p style="white-space: normal;">古镇戏剧节官方网站：www.wuzhenfestival.com</p>
-						<p style="white-space: normal;">官方咨询订票热线：0573-88731088</p>
-						<p style="white-space: normal;">古镇旅游预订网：
-							<a href="http://www.ewuzhen.com/">www.ewuzhen.com</a>
-						</p>
-						<p style="white-space: normal;">票务独家代理：大麦网
-							<a href="http://www.damai.cn/">www.damai.cn</a>
-						</p>
+						<div id="activityContent"></div>
 						<p><br/></p>
 						关键字:
-						<a href="">第六届古镇戏剧节,8.16开票</a>
+						<a href="" id="activityKey"></a>
 						<hr>
 
 
 					</li>
 					<li class="rList">
 						<h4>更多文化活动</h4>
-						<ul>
-							<li>
-								<a href="cultrue-detail.html">
-									<div class="celebrity-img-box">
-										<img src="uploads/cultrue/2018112908453484130.jpg" alt="" title="">
-									</div>
-									<h5>“时间开始了——2019古镇当代艺术邀请展”举行新闻发布会</h5>
-								</a>
-							</li>
-							<li>
-								<a href="/web/uploads/cultrue/details?id=68">
-									<div class="celebrity-img-box">
-										<img src="uploads/cultrue/2018080309044121333.jpg" alt="" title="">
-									</div>
-									<h5>戏剧百川齐汇古镇，名团新锐实验多元 ——2018年第六届古镇戏剧节即将开幕</h5>
-								</a>
-							</li>
-							<li>
-								<a href="/web/uploads/cultrue/details?id=67">
-									<div class="celebrity-img-box">
-										<img src="uploads/cultrue/2018053008113212251.jpg" alt="第六届古镇戏剧节青年竞演与古镇嘉年华报名正式启动" title="第六届古镇戏剧节青年竞演与古镇嘉年华报名正式启动">
-									</div>
-									<h5>第六届古镇戏剧节青年竞演与古镇嘉年华报名正式启动</h5>
-								</a>
-							</li>
+						<ul id="moreActivity">
 						</ul>
 					</li>
 				</ul>
@@ -643,7 +604,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="phone-mask">
+		<div id="phone-mask1">
 			<div>
 				<img src="images/导航菜单@2x.png">
 			</div>
@@ -722,7 +683,6 @@
 			<a href="http://chat10.live800.com/live800/chatClient/chatbox.jsp?companyID=87154&configID=152224&jid=3440628096&enterurl=http%3A%2F%2Fwww%2Eewuzhen%2Ecom%2Fwuzhen%2Findex%2Edo&timestamp=1252214612484s"></a>
 			<a href="javascript:;"><img src="images/floatbtn2.png" onclick="returnTop()" style="display:none;" /></a>
 		</div>
-
 	</body>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/phone.js"></script>
@@ -793,6 +753,52 @@
 
 			$('.lrslist li:nth-child(3n)').css('margin-right', '0');
 		});
+	</script>
+	<script src="js/project-path.js"></script>
+	<script>
+        function GetQueryString(name)
+        {
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if(r != null)
+                return  unescape(r[2]);
+            return null;
+        }
+        $(function () {
+            var activityId = GetQueryString("activityId");
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: path + "/cultureActivity/"+activityId,
+                success: function (result) {
+                    var data = result.data;
+                    $("#activityTitle").empty();
+                    $("#activityTitle").append(data.activityTitle);
+                    $("#activityTime").empty();
+                    $("#activityTime").append(data.activityTime);
+                    $("#activityKey").empty();
+                    $("#activityKey").append(data.activityKey);
+                    $("#activityContent").empty();
+                    $("#activityContent").append(data.activityContent);
+                }
+            });
+            $.ajax({
+                async: false,
+                type: "GET",
+                url: path + "/cultureActivity/list/"+activityId,
+                success: function (result) {
+                    var content = "";
+                    $("#moreActivity").empty();
+                    $.each(result.data, function (index, element) {
+						content += "<li><a href='cultrue-detail.html?activityId="+element.activityId+"'>";
+ 						content += "<div class='celebrity-img-box'><img src='"+element.activityImage+"' alt='' title=''>"
+						content += "</div><h5>"+element.activityTitle+"</h5>";
+ 						content += "</a></li>";
+                    });
+                    $("#moreActivity").append(content);
+                }
+            });
+        });
 	</script>
 
 	<script>

@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/travel?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=utf-8&nullCatalogMeansCurrent=true
     username: root
-    password: 123
+    password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.mysql.cj.jdbc.MysqlConnectionPoolDataSource
   thymeleaf:
@@ -28,4 +28,4 @@ server:
   port: 8080
   servlet:
     context-path: /travel
-fileRootPath: http://localhost:8080/travel
+fileRootPath: http://domla.xyz:8080/travel
